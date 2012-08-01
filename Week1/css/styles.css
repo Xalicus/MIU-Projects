@@ -1,0 +1,157 @@
+/*
+Author: Kevin Ward
+Class: MIU1208
+Name: Project 1
+Date: 07-30-2012
+*/
+
+#charset "utf-8";
+
+* {
+	background-color: #CCFFCC;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	min-height: 480px;
+	max-width: 480px;
+	text-align: center;
+	background-color: #CCFFCC;
+}
+
+header {
+	line-height: 1.2em;
+	letter-spacing: .02em;
+	text-align: center;
+	max-width: 480px;
+	text-shadow: 2px 2px 5px #FF6600;
+}
+
+h1 {
+	font-family: "Times New Roman", Times, serif;
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFF;
+	color: darkgreen;
+}
+
+h2 {
+	font-family: "Times New Roman", Times, serif;
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFF;
+	color: darkgreen;
+}
+
+article {
+	line-height: 1.0em;
+	letter-spacing: .001em;
+	text-align: center;
+	max-width: 480px;
+}
+
+article#KoolPetForm {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+}
+
+div#searchPets {
+	font-family: "Times New Roman", Times, serif;
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFCC;
+	color: darkgreen;
+}
+
+div#browsePets {
+	font-family: "Times New Roman", Times, serif;
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFCC;
+	color: darkgreen;
+}
+
+nav#addPets {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+}
+
+form {
+	line-height: 1.0em;
+	letter-spacing: .001em;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 480px;
+	background: #CCFFCC;
+}
+
+legend {
+	text-align: center;
+	color: #006600;
+}
+
+ul {
+	background: #CCFFCC;
+}
+
+li {
+	text-align: left;
+	color: #006600;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+	letter-spacing: .02em;
+	text-align: center;
+	max-width: 480px;
+	color: #006600;
+}
+
+a {
+	margin: 5px 5px;
+	color: #006600;
+}
+
+a:hover {
+	border: 1px dotted darkorange;
+	color: darkgreen;
+}
+
+a#addPet {
+	border: 1px solid #FF6600;
+	margin: 5px 10px;
+	padding: 5px;
+	color: #0000FF;
+	text-shadow: 1px 1px 2px #FF00FF;
+	background: #CCFFFF;
+}
+
+span {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #006600;
+	text-align: center;
+	max-width: 480px;
+}
+
+footer {
+	max-width: 480px;
+	text-align: center;
+}
+
+small {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0000FF;
+	text-shadow: 1px 1px 2px #FF00FF;
+}
+
+
+
+
