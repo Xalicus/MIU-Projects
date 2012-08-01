@@ -1,7 +1,7 @@
 /*
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 1
+Name: Project Week 1
 Date: 07-30-2012
 */
 
