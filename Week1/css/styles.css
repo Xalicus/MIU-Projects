@@ -1,7 +1,7 @@
 /*
 Author: Kevin Ward
 Class: MIU1208
-Name: Project Week 1
+Name: Project 1
 Date: 07-30-2012
 */
 
@@ -16,7 +16,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	min-height: 480px;
-	max-width: 480px;
+	max-width: 640px;
 	text-align: center;
 	background-color: #CCFFCC;
 }
@@ -25,25 +25,21 @@ header {
 	line-height: 1.2em;
 	letter-spacing: .02em;
 	text-align: center;
-	max-width: 480px;
 	text-shadow: 2px 2px 5px #FF6600;
 }
 
 h1 {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 10px;
-	border: 1px solid #FF6600;
-	padding: 5px;
-	background: #CCFFFF;
 	color: darkgreen;
 }
 
 h2 {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 10px;
-	border: 1px solid #FF6600;
-	padding: 5px;
-	background: #CCFFFF;
+	color: darkgreen;
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
 	color: darkgreen;
 }
 
@@ -51,25 +47,16 @@ article {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	text-align: center;
-	max-width: 480px;
 }
 
 article#KoolPetForm {
 	margin: 5px 10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
+	background: #CCFFFF;
 }
 
 div#searchPets {
-	font-family: "Times New Roman", Times, serif;
-	margin: 5px 10px;
-	border: 1px solid #FF6600;
-	padding: 5px;
-	background: #CCFFFCC;
-	color: darkgreen;
-}
-
-div#browsePets {
 	font-family: "Times New Roman", Times, serif;
 	margin: 5px 10px;
 	border: 1px solid #FF6600;
@@ -78,17 +65,47 @@ div#browsePets {
 	color: darkgreen;
 }
 
-nav#addPets {
+div#browsePets {
+	font-family: "Times New Roman", Times, serif;
 	margin: 5px 10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
+	background: #CCFFFF;
+	color: darkgreen;
+}
+
+div#author {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFF;
+}
+
+div#underconst {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFF;
+}
+
+nav#addPetFeature {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 5px;
+	background: #CCFFFF;
+}
+
+nav#navi {
+	margin: 5px 10px;
+	border: 1px solid #FF6600;
+	padding: 1px;
+	background: #CCFFFF;
 }
 
 form {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
-	max-width: 480px;
 	background: #CCFFCC;
 }
 
@@ -111,7 +128,6 @@ p {
 	line-height: 1.2em;
 	letter-spacing: .02em;
 	text-align: center;
-	max-width: 480px;
 	color: #006600;
 }
 
@@ -131,18 +147,16 @@ a#addPet {
 	padding: 5px;
 	color: #0000FF;
 	text-shadow: 1px 1px 2px #FF00FF;
-	background: #CCFFFF;
+	background: #CCFFCC;
 }
 
 span {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #006600;
 	text-align: center;
-	max-width: 480px;
 }
 
 footer {
-	max-width: 480px;
 	text-align: center;
 }
 
