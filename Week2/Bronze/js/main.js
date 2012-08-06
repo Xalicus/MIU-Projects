@@ -317,6 +317,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
+	// My Search Function
+	function searchPet() {
+		var sp=document.searchPets;
+		var submitTo = sp.searchengine.value + escape(sp.searchKoolPets.value);
+		window.location.href = submitTo;
+		return false;
+	};
+	
 	makeCats();
 
 	var showData = gebi("showData");

@@ -317,12 +317,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
-	function dosearch() {
-		var sf=document.searchform;
-		var submitto = sf.sengine.value + escape(sf.searchterms.value);
-		window.location.href = submitto;
+	// My Search Function
+	function searchPet() {
+		var sp=document.searchPets;
+		var submitTo = sp.searchengine.value + escape(sp.searchKoolPets.value);
+		window.location.href = submitTo;
 		return false;
-	}
+	};
 	
 	makeCats();
 
