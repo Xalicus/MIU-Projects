@@ -17,8 +17,8 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
-	min-height: 480px;
-	max-width: 640px;
+	/*min-height: 480px;*/
+	/*max-width: 640px;*/
 	text-align: center;
 	background-color: #CCFFCC;
 }
@@ -65,7 +65,7 @@ article#KoolPetForm {
 
 div#searchPets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 2px 2px;
+	margin: 1px -10px;
 	border: 1px solid #FF6600;
 	padding: 3px;
 	background: #CCFFCC;
@@ -74,7 +74,7 @@ div#searchPets {
 
 div#browsePets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 2px 2px;
+	margin: 1px -10px;
 	border: 1px solid #FF6600;
 	padding: 3px;
 	background: #CCFFFF;

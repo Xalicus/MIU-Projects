@@ -156,7 +156,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var imgLi = document.createElement("li");
 		makeSubList.appendChild(imgLi);
 		var newImg = document.createElement("img");
-		var setSrc = newImg.setAttribute("src", "img/" + catName + ".png");
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
 		imgLi.appendChild(newImg);
 	};
 
@@ -316,6 +316,13 @@ window.addEventListener("DOMContentLoaded", function(){
 			submit(this.key);
 		};
 	};
+	
+	function dosearch() {
+		var sf=document.searchform;
+		var submitto = sf.sengine.value + escape(sf.searchterms.value);
+		window.location.href = submitto;
+		return false;
+	}
 	
 	makeCats();
 
