@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+Author: Kevin Ward
+Class: MIU1208
+Name: Project 2
+Date: 08-09-2012
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
+	<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
+		
+	<title>Kev's KoolPetsDex</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Header -->
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>Kev's KoolPetsDex</h1>
+				<p>Click here to add more KoolPets!</p>
+				<p><a href="additem.html" id="addPet">ADD A KOOLPET NOW!</a></p>
+			</nav>
+		</header>
+		<!-- Main body of page -->
+		<article>
+			<div id="searchPets">
+				<h3>Search KoolPets</h3>
+				<form name="searchPets" onSubmit="searchPet();">
+					<input type="text" name="searchKoolPets">
+					<input type="submit" name="searchSubmit" value="Search KoolPets">
+				</form>
+			</div>
+			<div id="browsePets">
+				<h3>Browse KoolPets</h3>
+				<div id="DogsCat">
+				<a href="cs.html" id="Dogs">Dogs</a>
+				</div>
+				<div id="CatsCat">
+				<a href="cs.html" id="Cats">Cats</a>
+				</div>
+				<div id="Mythical">
+				<a href="cs.html" id="Mythical">Mythical</a>
+				</div>
+				<div id="Rodents">
+				<a href="cs.html" id="Rodents">Rodents</a>
+				</div>
+				<div id="Reptiles">
+				<a href="cs.html" id="Reptiles">Reptiles</a>
+				</div>
+				<div id="Birds">
+				<a href="cs.html" id="Birds">Birds</a>
+				</div>
+				<div id="Farm_Animals">
+				<a href="cs.html" id="Farm_Animals">Farm Animals</a>
+				</div>
+			</div>
+		</article>
+		<!-- Footer -->
+		<footer>
+			<nav id="navi">
+			<h3>Navigation:</h3>
+			<p><a href="index.html">Home</a> : 
+			<a href="additem.html">Add KoolPet</a> : 
+			<a href="info.html">About Me</a></p>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
