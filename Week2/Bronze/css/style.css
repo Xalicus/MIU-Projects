@@ -45,6 +45,11 @@ h3 {
 	color: darkgreen;
 }
 
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: darkgreen;
+}
+
 article {
 	line-height: 1.0em;
 	letter-spacing: .001em;
