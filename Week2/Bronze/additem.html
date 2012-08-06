@@ -8,33 +8,35 @@ Date: 08-09-2012
 
 <html lang="en">
 	<head>
-		<!-- Meta tags including char set, description, keywords and robots. -->
-		<meta charset="utf-8" />
+	
+		<meta charset="utf-8">
 		<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
-		<meta name="keywords" content="html5, mobile development, Full Sail University, pets" />
-		<!-- Robots allows search engines to index the page and follow the links. -->
-		<meta name="robots" content="index, follow" />
-		<!-- If no following allowed use "noindex, nofollow" instead. -->
-		<!-- Meta tags to allow the content to size properly to an iPhone  or Android display type -->
-		<meta name="viewport" content="user-scalable=no, width=device-width" />
-		<meta name="viewport" content="target-densitydpi=device-dpi" />
-		<!-- Meta tags for older phones and dumbphones. -->
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="320" />
-		
-		<!-- Document title -->
+		<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
+			
 		<title>Kev's KoolPetsDex</title>
 		
-		<!-- Link CSS -->
-		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	
 	</head>
 	<body>
 		<!-- Header -->
 		<header>
 			<nav id="addPetFeature">
-				<a href="index.html"><img src="img/img.png" width="60" height="75" title="My Joker Logo" /></a>
-				<h2>Add a KoolPet!</h2>
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Add a KoolPet!</h2>
 			</nav>
 		</header>
 		<!-- Main body of page -->

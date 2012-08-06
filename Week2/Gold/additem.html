@@ -7,97 +7,97 @@ Date: 08-09-2012
 -->
 
 <html lang="en">
-	<head>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
+	<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
+		
+	<title>Kev's KoolPetsDex</title>
 	
-		<meta charset="utf-8">
-		<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
-		<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<nav id="addPetFeature">
+			<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+			<br /><h2>Add a KoolPet!</h2>
+		</nav>
+	</header>
+	<!-- Main body of page -->
+	<article id="KoolPetForm">
+	<h3>Choose the type of KoolPet you want!.</h3>
+		<nav>
+		<a href="#" id="showData">Show KoolPets</a> 
+		<a href="#" id="clearData">Release all KoolPets</a> 
+		<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
+		</nav>
+	<br />
+	<form action="#" method="post" id="petForm">
+		<fieldset id="petFieldset">
+			<legend>Choose Wisely!</legend>
+			<span>* Fields are required</span>
+			<ul id="errors"></ul>
 			
-		<title>Kev's KoolPetsDex</title>
-		
-		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Mobile IE needs ClearType for smoothing fonts -->
-		<meta http-equiv="cleartype" content="on">
-		
-		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		
-		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-		<script src="js/libs/modernizr.custom.min.js"></script>
-	
-	</head>
-	<body>
-		<!-- Header -->
-		<header>
-			<nav id="addPetFeature">
-				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h2>Add a KoolPet!</h2>
-			</nav>
-		</header>
-		<!-- Main body of page -->
-		<article id="KoolPetForm">
-		<h3>Choose the type of KoolPet you want!.</h3>
-			<nav>
-			<a href="#" id="showData">Show KoolPets</a> 
-			<a href="#" id="clearData">Release all KoolPets</a> 
-			<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
-			</nav>
-		<br />
-		<form action="#" method="post" id="petForm">
-			<fieldset id="petFieldset">
-				<legend>Choose Wisely!</legend>
-				<span>* Fields are required</span>
-				<ul id="errors"></ul>
+			<ul id="questions">
+				<li id="petsType"><label for="petsType">* KoolPet Type:</label>
+				</li>
+					
+				<li><label for="petName">* KoolPet's Name:</label>
+					<input type="text" id="petName" /></li>
+					
+				<li><label for="petEmail">* KoolPet Email:</label>
+					<input type="email" id="petEmail" /></li>
 				
-				<ul id="questions">
-					<li id="petsType"><label for="petsType">* KoolPet Type:</label>
-					</li>
-						
-					<li><label for="petName">* KoolPet's Name:</label>
-						<input type="text" id="petName" /></li>
-						
-					<li><label for="petEmail">* KoolPet Email:</label>
-						<input type="email" id="petEmail" /></li>
+				<li><label for="genderValue"> Gender: </label>
+					<ul class="checkbox">
+						<li><input type="radio" name="genderValue" value="Male" id="male" /><label for="male">Male</label></li>
+						<li><input type="radio" name="genderValue" value="Female" id="female" /><label for="female">Female</label></li>
+					</ul>
+				</li>
 					
-					<li><label for="genderValue"> Gender: </label>
-						<ul class="checkbox">
-							<li><input type="radio" name="genderValue" value="Male" id="male" /><label for="male">Male</label></li>
-							<li><input type="radio" name="genderValue" value="Female" id="female" /><label for="female">Female</label></li>
-						</ul>
-					</li>
-						
-					<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite KoolPet:</label></li>
-					
-					<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" /></label></li>
-					
-					<li><label for="koolness">Koolness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
-					
-					<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
-				</ul>
-			<input type="submit" value="Submit KoolPet Now" id="submit" /> 
-			<input type="reset" value="Reset Page" id="reset" />
-			</fieldset>
-		</form>
-		</article>
-		<!-- Footer -->
-		<footer>
-			<nav id="navi">
-			<h3>Navigation:</h3>
-			<p><a href="index.html">Home</a> : 
-			<a href="additem.html">Add KoolPet</a> : 
-			<a href="info.html">About Me</a></p>
-			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
-			</nav>
-		</footer>
-		
-		<!-- Link JavaScript -->
-		<script src="js/json.js" type="text/javascript"></script>
-		<script src="js/main.js" type="text/javascript"></script>
-		
-	</body>
+				<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite KoolPet:</label></li>
+				
+				<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" /></label></li>
+				
+				<li><label for="koolness">Koolness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
+				
+				<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
+			</ul>
+		<input type="submit" value="Submit KoolPet Now" id="submit" /> 
+		<input type="reset" value="Reset Page" id="reset" />
+		</fieldset>
+	</form>
+	</article>
+	<!-- Footer -->
+	<footer>
+		<nav id="navi">
+		<h3>Navigation:</h3>
+		<p><a href="index.html">Home</a> : 
+		<a href="additem.html">Add KoolPet</a> : 
+		<a href="info.html">About Me</a></p>
+		<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+		</nav>
+	</footer>
+	
+	<!-- Link JavaScript -->
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	
+</body>
 </html>
