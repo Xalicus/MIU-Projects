@@ -32,8 +32,10 @@ Date: 08-09-2012
 
 </head>
 <body>
-
+	<!-- Home Page -->
+	<div data-role="page" id="home" data-theme="a">
 	<!-- Header -->
+		<div data-role="header">
 		<header>
 			<nav id="addPetFeature">
 				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
@@ -42,7 +44,10 @@ Date: 08-09-2012
 				<p><a href="additem.html" id="addPet">ADD A KOOLPET NOW!</a></p>
 			</nav>
 		</header>
+		</div> <!-- end header -->
+		
 		<!-- Main body of page -->
+		<div data-role="content">
 		<article>
 			<div id="searchPets">
 				<h3>Search KoolPetsDex</h3>
@@ -53,42 +58,92 @@ Date: 08-09-2012
 			</div>
 			<div id="browsePets">
 				<h3>Browse KoolPets</h3>
-				<div id="Birds">
-				<a href="cs.html" id="Birds">01: Birds</a>
-				</div>
-				<div id="CatsCat">
-				<a href="cs.html" id="Cats">02: Cats</a>
-				</div>
-				<div id="DogsCat">
-				<a href="cs.html" id="Dogs">03: Dogs</a>
-				</div>
-				<div id="Farm_Animals">
-				<a href="cs.html" id="Farm_Animals">04: Farm Animals</a>
-				</div>
-				<div id="Mythical">
-				<a href="cs.html" id="Mythical">05: Mythical</a>
-				</div>
-				<div id="Reptiles">
-				<a href="cs.html" id="Reptiles">06: Reptiles</a>
-				</div>
-				<div id="Rodents">
-				<a href="cs.html" id="Rodents">07: Rodents</a>
-				</div>
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li>
+						<a href="#cs">
+						<img src="images/birds.png" />
+						<h3>01:) Birds</h3>
+						<p>Flying creatures of all types.</p>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/cats.png" />
+						<h3>02:) Cats</h3>
+						<p>Felines big and small.</p>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/dogs.png" />
+						<h3>03:) Dogs</h3>
+						<p>Canines up the Whazoo.</p>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/farm_animals.png" />
+						<h3>04:) Farm Animals</h3>
+						<p>Animals you would find on a farm.</p>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/mythical.png" />
+						<h3>05:) Mythical</h3>
+						<p>From Dragons to Unicorns, we have them all!</p>
+						<span class="ui-li-count">6</span>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/reptiles.png" />
+						<h3>06:) Reptiles</h3>
+						<p>Snakes, turtles, lizards, etc.</p>
+						</a>
+					</li>
+					<li>
+						<a href="#cs">
+						<img src="images/rodents.png" />
+						<h3>07:) Rodents</h3>
+						<p>Rats, Mice, Chinchillas, and more.</p>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</article>
+		</div> <!-- end content -->
+		
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed" data-theme="a">
 		<footer>
 			<nav id="navi">
-			<p><a href="index.html" id="home" data-role="button">Home</a> : 
-			<a href="additem.html" data-role="button">Add KoolPet</a> : 
-			<a href="info.html" data-role="button">About Me</a> : 
+			<p><a href="#home" data-role="button">Home</a> : 
+			<a href="#additem" data-role="button">Add KoolPet</a> : 
+			<a href="#info" data-role="button">About Me</a> : 
 			<a href="../Gold/index.html" data-role="button">Gold App</a></p>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>
 		</footer>
-		</div>
-
+		</div> <!-- end footer-->
+	</div> <!-- end Home Page -->
+	
+	<!-- Add Item Page -->
+	<div data-role="page" id="additem">
+	
+	</div> <!-- end Add Item Page -->
+	
+	<!-- Info Page -->
+	<div data-role="page" id="info">
+	
+	</div> <!-- end Info Page -->
+	
+	<!-- Coming Soon Page -->
+	<div data-role="page" id="cs">
+	
+	</div> <!-- end Coming Soon Page -->
+	
+	
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
