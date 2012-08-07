@@ -140,9 +140,9 @@ Date: 08-09-2012
 		<article id="KoolPetForm">
 			<h3>Choose the type of KoolPet you want!.</h3>
 				<nav>
-				<a href="#" id="showData">Show KoolPets</a> 
-				<a href="#" id="clearData">Release all KoolPets</a> 
-				<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
+				<a href="#showItem" id="showData" data-ajax="false">Show KoolPets</a> 
+				<a href="#addItem" id="clearData">Release all KoolPets</a> 
+				<a href="#addItem" id="addNew" style="display:none;">Add New KoolPet</a>
 				</nav>
 			<br />
 			<form action="#" method="post" id="petForm">
@@ -200,6 +200,39 @@ Date: 08-09-2012
 		</div> <!-- end footer -->
 	</div>
 	<!-- End Add Item Page -->
+	
+	
+	<!-- Show Item Page -->
+	<div data-role="page" id="showItem" data-add-back-btn="true" data-theme="b">
+		<div data-role="header" data-theme="b">
+		<header>
+			<nav id="addPetFeature">
+				<a href="#home"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Show KoolPets!</h2>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		<div data-role="content" id="petsForm" data-theme="b">
+		
+		</div> <!-- end content -->
+		<div data-role="footer" data-position="fixed" data-theme="b" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+			<div data-role="navbar" data-theme="b">
+				<ul>
+					<li><a href="#home" data-role="button">Home</a></li>
+					<li><a href="#addItem" data-role="button" class="ui-btn-active ui-state-persist">Add Pet</a></li>
+					<li><a href="#info" data-role="button">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+				</ul>
+			</div><!-- /navbar -->
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer -->
+		
+	</div>
+	<!-- End Show Item Page -->
 	
 	
 	<!-- Info Page -->
