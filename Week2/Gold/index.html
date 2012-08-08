@@ -60,7 +60,6 @@ Date: 08-09-2012
 			
 			<div id="browsePets">
 				<h3>Browse KoolPetsDex</h3>
-				
 				<div data-role="collapsible-set">
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>1: Birds</h4>
@@ -109,10 +108,10 @@ Date: 08-09-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button" class="ui-btn-active ui-state-persist">Home</a></li>
-					<li><a href="#addItem" data-role="button">Add Pet</a></li>
-					<li><a href="#info" data-role="button">About Me</a></li>
-					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" data-ajax="false" rel="external">Bronze App</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
@@ -141,8 +140,8 @@ Date: 08-09-2012
 			<h3>Choose the type of KoolPet you want!.</h3>
 				<nav>
 				<a href="#showItem" id="showData" data-ajax="false">Show KoolPets</a> 
-				<a href="#addItem" id="clearData">Release all KoolPets</a> 
-				<a href="#addItem" id="addNew" style="display:none;">Add New KoolPet</a>
+				<a href="#addItem" id="clearData" data-ajax="false">Release all KoolPets</a> 
+				<a href="#addItem" id="addNew" data-ajax="false" style="display:none;">Add New KoolPet</a>
 				</nav>
 			<br />
 			<form action="#" method="post" id="petForm">
@@ -176,7 +175,13 @@ Date: 08-09-2012
 						
 						<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
 					</ul>
-				<input type="submit" value="Submit KoolPet Now" id="submit" /> 
+				<div data-role="fieldcontain">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><input type="submit" value="Submit KoolPet" id="submit" /></div>
+						<div class="ui-block-b"><input type="reset" value="Reset Page" id="reset" /></div>
+					</div>
+				</div>
+				<input type="submit" value="Submit KoolPet" id="submit" /> 
 				<input type="reset" value="Reset Page" id="reset" />
 				</fieldset>
 			</form>
@@ -188,10 +193,10 @@ Date: 08-09-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button">Home</a></li>
-					<li><a href="#addItem" data-role="button" class="ui-btn-active ui-state-persist">Add Pet</a></li>
-					<li><a href="#info" data-role="button">About Me</a></li>
-					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" data-ajax="false" rel="external">Bronze App</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
@@ -212,18 +217,20 @@ Date: 08-09-2012
 			</nav>
 		</header>
 		</div> <!-- end header -->
+		
 		<div data-role="content" id="petsForm" data-theme="b">
 		
 		</div> <!-- end content -->
+		
 		<div data-role="footer" data-position="fixed" data-theme="b" data-id="navfooter">
 		<footer>
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button">Home</a></li>
-					<li><a href="#addItem" data-role="button" class="ui-btn-active ui-state-persist">Add Pet</a></li>
-					<li><a href="#info" data-role="button">About Me</a></li>
-					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" data-ajax="false" rel="external">Bronze App</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
@@ -257,8 +264,13 @@ Date: 08-09-2012
 				I created all the HTML, JS, and CSS. The Joker Face image was also created 
 				by me. The animal category images were made by my lovely wife Katrina Ward.
 				The under construction image was found 
-				<a href="http://www.donotenter.com/cool/ucgraphics/large/page4/index.htm">here.</a><br />
+				<a href="http://www.donotenter.com/cool/ucgraphics/large/page4/index.htm" data-ajax="false">here.</a><br />
 				All images are used under creative commons act. All Rights Reserved.</p>
+				
+				<h4>Links</h4>
+				<p><a href="../Gold/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Gold App</a>
+				<a href="../Bronze/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Bronze App</a>
+				</p>
 			</div>
 		</article>
 		</div> <!-- end content -->
@@ -269,10 +281,10 @@ Date: 08-09-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button">Home</a></li>
-					<li><a href="#addItem" data-role="button">Add Pet</a></li>
-					<li><a href="#info" data-role="button" class="ui-btn-active ui-state-persist">About Me</a></li>
-					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" data-ajax="false" rel="external">Bronze App</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
@@ -302,7 +314,7 @@ Date: 08-09-2012
 				<h3>Oops... You found our hideout!</h3>
 				<img src="images/uc2_large02.gif" title="Under Construction" />
 				<p>Since you found us out, I'll lead you back home.<br />
-				Click here to go <a href="#home">Home</a></p>
+				Click here to go <a href="#home" data-ajax="false">Home</a></p>
 			</div>
 		</article>
 		</div> <!-- end content -->
@@ -313,10 +325,10 @@ Date: 08-09-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button">Home</a></li>
-					<li><a href="#addItem" data-role="button">Add Pet</a></li>
-					<li><a href="#info" data-role="button">About Me</a></li>
-					<li><a href="../Bronze/index.html" data-role="button" rel="external">Bronze App</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="../Bronze/index.html" data-role="button" data-ajax="false" rel="external">Bronze App</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>

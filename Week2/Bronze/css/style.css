@@ -17,8 +17,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
-	/*min-height: 480px;
-	max-width: 640px;*/
+	max-width: 640px;
 	text-align: center;
 	background-color: #CCFFCC;
 }
@@ -57,56 +56,68 @@ article {
 }
 
 article#KoolPetForm {
-	margin: 5px 10px;
+	margin: 5px 0px;
 	border: 1px solid #FF6600;
-	padding: 5px;
+	padding: 0px;
 	background: #CCFFFF;
 }
 
 div#searchPets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 10px;
+	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 5px;
 	background: #CCFFCC;
 	color: darkgreen;
 }
 
+div#searchPets h3 {
+	font-family: "Times New Roman", Times, serif;
+	color: darkgreen;
+}
+
 div#browsePets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 10px;
+	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 5px;
 	background: #CCFFFF;
 	color: darkgreen;
 }
 
+div#browsePets h3 {
+	font-family: "Times New Roman", Times, serif;
+	color: darkgreen;
+}
+
 div#author {
-	margin: 5px 10px;
+	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 5px;
 	background: #CCFFFF;
 }
 
 div#underconst {
-	margin: 5px 10px;
+	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 5px;
 	background: #CCFFFF;
+}
+
+div controlgroup {
+	text-align: center;
 }
 
 nav#addPetFeature {
-	margin: 5px 10px;
+	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	background: #CCFFFF;
 }
 
 nav#navi {
-	margin: 5px 10px;
+	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 1px;
-	background: #CCFFFF;
 }
 
 form {
@@ -150,7 +161,7 @@ a:hover {
 
 a#addPet {
 	border: 1px solid #FF6600;
-	margin: 5px 10px;
+	margin: 5px 1px;
 	padding: 5px;
 	color: #0000FF;
 	text-shadow: 1px 1px 2px #FF00FF;
@@ -164,6 +175,10 @@ span {
 }
 
 footer {
+	text-align: center;
+}
+
+footer div {
 	text-align: center;
 }
 

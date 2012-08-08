@@ -35,30 +35,31 @@ Date: 08-09-2012
 	<!-- Home Page -->
 	<div data-role="page" id="home" data-theme="a">
 	<!-- Header -->
-		<div data-role="header">
+		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
 				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
 				<br /><h1>Kev's KoolPetsDex</h1>
 				<p>Click here to add more KoolPets!</p>
-				<p><a href="additem.html" id="addPet">ADD A KOOLPET NOW!</a></p>
+				<p><a href="#additem" id="addPet" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">ADD A KOOLPET NOW!</a></p>
 			</nav>
 		</header>
 		</div> <!-- end header -->
 		
 		<!-- Main body of page -->
-		<div data-role="content">
+		<div data-role="content" data-theme="a">
 		<article>
 			<div id="searchPets">
 				<h3>Search KoolPetsDex</h3>
 				<form name="searchPets" onSubmit="searchPet();">
-					<input type="text" name="searchKoolPets">
-					<input type="submit" name="searchSubmit" value="Search KoolPets">
+					<input type="text" name="searchKoolPets" data-mini="true">
+					<input type="submit" name="searchSubmit" value="Search KoolPets" data-mini="true">
 				</form>
 			</div>
 			<div id="browsePets">
+				<fieldset id="petFieldset" data-mini="true">
 				<h3>Browse KoolPets</h3>
-				<ul data-role="listview" data-inset="true" data-filter="true">
+				<ul data-role="listview" data-inset="true" data-filter="true" data-theme="a">
 					<li>
 						<a href="#cs">
 						<img src="images/Birds.png" />
@@ -110,12 +111,13 @@ Date: 08-09-2012
 						</a>
 					</li>
 				</ul>
+				</fieldset>
 			</div>
 		</article>
 		</div> <!-- end content -->
 		
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-theme="a">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal">
@@ -133,16 +135,196 @@ Date: 08-09-2012
 	<!-- Add Item Page -->
 	<div data-role="page" id="additem">
 	
+		<!-- Header -->
+		<div data-role="header" data-theme="a">
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Add a KoolPet!</h2>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" data-theme="a">
+		<article id="KoolPetForm">
+		<h3>Choose the type of KoolPet you want!.</h3>
+			<nav>
+			<a href="#" id="showData">Show KoolPets</a> 
+			<a href="#" id="clearData">Release all KoolPets</a> 
+			<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
+			</nav>
+		<br />
+		<form action="#" method="post" id="petForm">
+			<fieldset id="petFieldset">
+				<legend>Choose Wisely!</legend>
+				<span>* Fields are required</span>
+				<ul id="errors"></ul>
+				
+				<ul id="questions">
+					<li id="petsType"><label for="petsType">* KoolPet Type:</label>
+					</li>
+						
+					<li><label for="petName">* KoolPet's Name:</label>
+						<input type="text" id="petName" /></li>
+						
+					<li><label for="petEmail">* KoolPet Email:</label>
+						<input type="email" id="petEmail" /></li>
+					
+					<li><label for="genderValue"> Gender: </label>
+						<ul class="checkbox">
+							<li><input type="radio" name="genderValue" value="Male" id="male" /><label for="male">Male</label></li>
+							<li><input type="radio" name="genderValue" value="Female" id="female" /><label for="female">Female</label></li>
+						</ul>
+					</li>
+						
+					<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite KoolPet:</label></li>
+					
+					<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" /></label></li>
+					
+					<li><label for="koolness">Koolness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
+					
+					<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
+				</ul>
+			<input type="submit" value="Submit KoolPet Now" id="submit" /> 
+			<input type="reset" value="Reset Page" id="reset" />
+			</fieldset>
+		</form>
+		</article>
+		</div> <!-- end content -->
+		
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+				<div data-role="controlgroup" data-type="horizontal">
+				<p><a href="#home" data-role="button">Home</a>
+				<a href="#additem" data-role="button">Add KoolPet</a>
+				<a href="#info" data-role="button">About Me</a>
+				<a href="../Gold/index.html" data-role="button" rel="external">Gold App</a></p>
+				</div>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer-->
 	</div> <!-- end Add Item Page -->
+	
+	
+	<!-- Show Item Page -->
+	<div data-role="page" id="showItem" data-add-back-btn="true" data-theme="a">
+		<div data-role="header" data-theme="b">
+		<header>
+			<nav id="addPetFeature">
+				<a href="#home"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Show KoolPets!</h2>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		<div data-role="content" data-theme="a">
+		
+		</div> <!-- end content -->
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+				<div data-role="controlgroup" data-type="horizontal">
+				<p><a href="#home" data-role="button">Home</a>
+				<a href="#additem" data-role="button">Add KoolPet</a>
+				<a href="#info" data-role="button">About Me</a>
+				<a href="../Gold/index.html" data-role="button" rel="external">Gold App</a></p>
+				</div>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer-->
+		
+	</div>
+	<!-- End Show Item Page -->
+	
 	
 	<!-- Info Page -->
 	<div data-role="page" id="info">
+		<div data-role="header" data-theme="b">
+		<!-- Header -->
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>About KoolPetsDex</h1>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" data-theme="a">
+		<article>
+			<div id="author">
+				<h3>About the Author</h3>
+				<p>Hello User, My name is Kevin Ward. I study at Full Sail University.
+				I created this page to tell a little about me, and my web app KoolPetsDex.
+				I created all the HTML, JS, and CSS. The Joker Face image was also created 
+				by me. The Animal category images were made by my lovely wife Katrina Ward.
+				The under construction image was found 
+				<a href="http://www.donotenter.com/cool/ucgraphics/large/page4/index.htm">here.</a>
+				All images are used under creative commons act. All Rights Reserved.</p>
+			</div>
+		</article>
+		</div>
 	
+	<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+				<div data-role="controlgroup" data-type="horizontal">
+				<p><a href="#home" data-role="button">Home</a>
+				<a href="#additem" data-role="button">Add KoolPet</a>
+				<a href="#info" data-role="button">About Me</a>
+				<a href="../Gold/index.html" data-role="button" rel="external">Gold App</a></p>
+				</div>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer-->
 	</div> <!-- end Info Page -->
+	
 	
 	<!-- Coming Soon Page -->
 	<div data-role="page" id="cs">
+		<!-- Header -->
+		<div data-role="header" data-theme="b">
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>Under Construction</h1>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" data-theme="b">
+		<article>
+			<div id="underconst">
+				<h3>Oops... You found our hideout!</h3>
+				<img src="images/uc2_large02.gif" title="Under Construction" />
+				<p>Since you found us out, I'll lead you back home.<br />
+				Click here to go <a href="#home">Home</a></p>
+			</div>
+		</article>
+		</div> <!-- end conent -->
 	
+	<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+				<div data-role="controlgroup" data-type="horizontal">
+				<p><a href="#home" data-role="button">Home</a>
+				<a href="#additem" data-role="button">Add KoolPet</a>
+				<a href="#info" data-role="button">About Me</a>
+				<a href="../Gold/index.html" data-role="button" rel="external">Gold App</a></p>
+				</div>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer-->
 	</div> <!-- end Coming Soon Page -->
 	
 	
