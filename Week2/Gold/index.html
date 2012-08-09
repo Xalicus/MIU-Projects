@@ -50,12 +50,15 @@ Date: 08-09-2012
 		
 		<article id="searchbrowse">
 			<div id="searchPets">
-				<h3>Search KoolPetsDex</h3>
-				<form action="#" method="post" id="searchForm" name="searchPets" onSubmit="return searchPet();">
+				<label for="searchPets"><h3>Search KoolPetsDex</h3></label>
+				<input type="search" name="search" id="searchPets" value="" data-mini="true" data-theme="b" />
+				<input type="submit" name="searchSubmit" value="Search KoolPets" data-mini="true">
+				
+				<!-- <form action="#" method="post" id="searchForm" name="searchPets" onSubmit="return searchPet();">
 					<input type="hidden" name="searchengine" value="http://www.google.com/search?q=site:Xalicus.github.com/MIU-Projects/Gold/+" />
 					<input type="text" name="searchKoolPets" data-mini="true">
 					<input type="submit" name="searchSubmit" value="Search KoolPets" data-mini="true">
-				</form>
+				</form> -->
 			</div> <!-- end searchPets -->
 			
 			<div id="browsePets">
@@ -143,7 +146,7 @@ Date: 08-09-2012
 				<a href="#addItem" id="addNew" style="display:none; "data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Add New KoolPet</a>
 				</nav>
 			<br />
-			<form action="#" method="post" id="petForm">
+			<form action="#" method="post" id="petForm" data-role="none">
 				<fieldset id="petFieldset">
 					<legend>Choose Wisely!</legend>
 					<span>* Fields are required</span>
@@ -159,7 +162,7 @@ Date: 08-09-2012
 						<li><label for="petEmail">* KoolPet Email:</label>
 							<input type="email" id="petEmail" /></li>
 						
-						<li><label for="genderValue"> Gender: </label>
+						<li><label for="genderValue">* Gender: </label>
 							<ul class="checkbox">
 								<li><label for="male">Male</label><input type="radio" name="genderValue" value="Male" id="male" /></li>
 								<li><label for="female">Female</label><input type="radio" name="genderValue" value="Female" id="female" /></li>

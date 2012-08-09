@@ -320,7 +320,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	// My Search Function
 	function searchPet() {
-		var sp = document.searchPets;
+		var sp = document.index;
 		var submitTo = sp.searchengine.value + escape(sp.searchKoolPets.value);
 		window.location.href = submitTo;
 		return false;
