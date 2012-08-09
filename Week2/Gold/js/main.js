@@ -121,9 +121,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		// This is supposed to write data from Local Storage back to the browser.
 		var makeDiv = document.createElement("div");
-		makeDiv.setAttribute("id", "items");
+		/*makeDiv.setAttribute("id", "items");*/ // Found out I don't need this line anymore.
 		var makeList = document.createElement("ul");
-		makeDiv.appendChild(makeList);
+		/*makeDiv.appendChild(makeList);*/ // Modified this line to work with my current code.
+		gebi("items").appendChild(makeList);
 		// This code should add the data to my page when I press show data.
 		document.body.appendChild(makeDiv);
 		gebi("items").style.display = "block";
