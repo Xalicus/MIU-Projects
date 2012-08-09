@@ -149,8 +149,8 @@ Date: 08-09-2012
 		<article id="KoolPetForm">
 		<h3>Choose the type of KoolPet you want!.</h3>
 			<nav>
-			<a href="#" id="showData">Show KoolPets</a> 
-			<a href="#" id="clearData">Release all KoolPets</a> 
+			<a href="#showitem" id="showData">Show KoolPets</a> 
+			<a href="#showitem" id="clearData">Release all KoolPets</a> 
 			<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
 			</nav>
 		<br />
@@ -210,7 +210,7 @@ Date: 08-09-2012
 	
 	<!-- Show Item Page -->
 	<div data-role="page" id="showitem" data-add-back-btn="true" data-theme="a">
-		<div data-role="header" data-theme="b">
+		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
 				<a href="#home"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
@@ -219,7 +219,9 @@ Date: 08-09-2012
 		</header>
 		</div> <!-- end header -->
 		<div data-role="content" data-theme="a">
-		
+			
+			<div id="showdata" data-theme="a"></div>
+			
 		</div> <!-- end content -->
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
@@ -266,7 +268,9 @@ Date: 08-09-2012
 				
 				<h4>Links</h4>
 				<p><a href="../Gold/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Gold App</a>
-				<a href="../Bronze/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Bronze App</a></p>
+				<a href="../Bronze/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Bronze App</a>
+				<a href="http://xalicus.github.com/MIU-Projects/Week2/Gold/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Gold App</a>
+				<a href="http://xalicus.github.com/MIU-Projects/Week2/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a></p>
 			</div>
 		</article>
 		</div>

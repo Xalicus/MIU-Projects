@@ -26,27 +26,27 @@ header {
 	line-height: 1.2em;
 	letter-spacing: .02em;
 	text-align: center;
-	text-shadow: 2px 2px 5px #FF6600;
+	text-shadow: 2px 2px 5px darkgreen;
 }
 
 h1 {
 	font-family: "Times New Roman", Times, serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 h2 {
 	font-family: "Times New Roman", Times, serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 h3 {
 	font-family: Arial, Helvetica, sans-serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 h4 {
 	font-family: Arial, Helvetica, sans-serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 article {
@@ -59,49 +59,49 @@ article#KoolPetForm {
 	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 0px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
 }
 
 div#searchPets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 0px;
+	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	background: #CCFFCC;
-	color: darkgreen;
+	/*background: #CCFFCC;*/
+	color: #FF6600;
 }
 
 div#searchPets h3 {
 	font-family: "Times New Roman", Times, serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 div#browsePets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 5px 0px;
+	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	background: #CCFFFF;
-	color: darkgreen;
+	/*background: #CCFFFF;*/
+	color: #FF6600;
 }
 
 div#browsePets h3 {
 	font-family: "Times New Roman", Times, serif;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 div#author {
 	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
 }
 
 div#underconst {
 	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
 }
 
 div controlgroup {
@@ -118,27 +118,28 @@ nav#navi {
 	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 1px;
+	text-align: center;
 }
 
 form {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
-	background: #CCFFCC;
+	/*background: #CCFFCC;*/
 }
 
 legend {
 	text-align: center;
-	color: #006600;
+	color: #FF6600;
 }
 
 ul {
-	background: #CCFFCC;
+	/*background: #CCFFCC;*/
 }
 
 li {
 	text-align: left;
-	color: #006600;
+	color: #FF6600;
 }
 
 p {
@@ -146,31 +147,31 @@ p {
 	line-height: 1.2em;
 	letter-spacing: .02em;
 	text-align: center;
-	color: #006600;
+	color: #FF6600;
 }
 
 a {
 	margin: 5px 5px;
-	color: #006600;
+	color: #FF6600;
 }
 
 a:hover {
 	border: 1px dotted darkorange;
-	color: darkgreen;
+	color: #FF6600;
 }
 
 a#addPet {
 	border: 1px solid #FF6600;
 	margin: 5px 1px;
 	padding: 5px;
-	color: #0000FF;
-	text-shadow: 1px 1px 2px #FF00FF;
-	background: #CCFFCC;
+	color: #FF6600;
+	text-shadow: 1px 1px 2px #darkgreen;
+	/*background: #CCFFCC;*/
 }
 
 span {
 	font-family: Arial, Helvetica, sans-serif;
-	color: #006600;
+	color: #FF6600;
 	text-align: center;
 }
 

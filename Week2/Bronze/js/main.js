@@ -286,7 +286,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 		
 		// Pet Name Validation
-		if (getPetName.value == "") {
+		if (getPetName.value === "") {
 			var petNameError = "Please enter a KoolPet Name!";
 			getPetName.style.border = "1px solid red";
 			messageArray.push(petNameError);
