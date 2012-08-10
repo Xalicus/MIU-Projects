@@ -49,11 +49,6 @@ Date: 08-09-2012
 		<!-- Main body of page -->
 		<div data-role="content" data-theme="a">
 		<article>
-			<div id="searchPets">
-				<label for="searchPets"><h3>Search KoolPetsDex</h3></label>
-				<input type="search" name="search" id="searchPets" value="" data-mini="true" data-theme="a" />
-				<input type="submit" name="searchSubmit" value="Search KoolPets" data-mini="true">
-			</div>
 			<div id="browsePets">
 				<!-- <fieldset id="browsePet" data-mini="true"> -->
 				<h3>Browse KoolPets</h3>
@@ -130,7 +125,7 @@ Date: 08-09-2012
 	</div> <!-- end Home Page -->
 	
 	<!-- Add Item Page -->
-	<div data-role="page" id="additem">
+	<div data-role="page" id="additem" data-add-back-btn="true" data-theme="a">
 	
 		<!-- Header -->
 		<div data-role="header" data-theme="a">
@@ -216,9 +211,21 @@ Date: 08-09-2012
 			</nav>
 		</header>
 		</div> <!-- end header -->
-		<div data-role="content" data-theme="a">
+		<div data-role="content" id="petsForm" data-theme="b">
+			<!-- This is where the list of pets will appear. -->
+			<div id="items" class="itemlist" data-theme="b">
 			
-			<div id="showdata" data-theme="a"></div>
+				<div id="searchPets" data-theme="a">
+					<!-- Live text search from "http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/" -->
+					<form id="live-search" action="" class="styled" method="post">
+						<fieldset>
+							<input type="text" class="text-input" id="filter" value="" data-mini="true" />
+							<span id="filter-count"></span>
+						</fieldset>
+					</form>
+				</div> <!-- end searchPets -->
+			
+			</div>
 			
 		</div> <!-- end content -->
 		<!-- Footer -->
@@ -240,7 +247,7 @@ Date: 08-09-2012
 	
 	
 	<!-- Info Page -->
-	<div data-role="page" id="info">
+	<div data-role="page" id="info" data-add-back-btn="true" data-theme="a">
 		<div data-role="header" data-theme="a">
 		<!-- Header -->
 		<header>
@@ -291,7 +298,7 @@ Date: 08-09-2012
 	
 	
 	<!-- Coming Soon Page -->
-	<div data-role="page" id="cs">
+	<div data-role="page" id="cs" data-add-back-btn="true" data-theme="a">
 		<!-- Header -->
 		<div data-role="header" data-theme="a">
 		<header>

@@ -121,26 +121,27 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		// This is supposed to write data from Local Storage back to the browser.
 		var makeDiv = document.createElement("div");
-		makeDiv.setAttribute("id", "items");
+		/*makeDiv.setAttribute("id", "items");*/ // Found out I don't need this line anymore.
 		var makeList = document.createElement("ul");
-		makeDiv.appendChild(makeList);
+		/*makeDiv.appendChild(makeList);*/ // Modified this line to work with my current code.
+		gebi("items").appendChild(makeList);
 		// This code should add the data to my page when I press show data.
 		document.body.appendChild(makeDiv);
 		gebi("items").style.display = "block";
 		for (var i=0, len=localStorage.length; i<len; i++) {
 			var makeLi = document.createElement("li");
-			var linksLi = document.createElement("li");
+			var linksLi = document.createElement("div");
 			makeList.appendChild(makeLi);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
 			// Convert strings back to being an object from localStorage value.
 			var object = JSON.parse(value);
-			var makeSubList = document.createElement("ul");
+			var makeSubList = document.createElement("div");
 			makeLi.appendChild(makeSubList);
 			// This next line is to grab the Img that fits the category it's in.
 			getImg(object.petGroups[1], makeSubList);
 			for (var n in object) {
-				var makeSubLi = document.createElement("li");
+				var makeSubLi = document.createElement("div");
 				makeSubList.appendChild(makeSubLi);
 				var optSubText = object[n][0] + " " + object[n][1];
 				makeSubLi.innerHTML = optSubText;
@@ -153,7 +154,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	// This is to get images for the correct category.
 	function getImg(catName, makeSubList) {
-		var imgLi = document.createElement("li");
+		var imgLi = document.createElement("div");
 		makeSubList.appendChild(imgLi);
 		var newImg = document.createElement("img");
 		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
@@ -318,12 +319,32 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 	
 	// My Search Function
-	function searchPet() {
-		var sp=document.searchPets;
-		var submitTo = sp.searchengine.value + escape(sp.searchKoolPets.value);
-		window.location.href = submitTo;
-		return false;
-	};
+	// Live Text Search from "http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/"
+	$(document).ready(function(){
+		$("#filter").keyup(function(){
+	 
+			// Retrieve the input field text and reset the count to zero
+			var filter = $(this).val(), count = 0;
+	 
+			// Loop through the KoolPets list
+			$(".itemlist li").each(function(){
+	 
+				// If the list item does not contain the text phrase fade it out
+				if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+					$(this).fadeOut();
+	 
+				// Show the list item if the phrase matches and increase the count by 1
+				} else {
+					$(this).show();
+					count++;
+				}
+			});
+	 
+			// Update the count
+			var numberItems = count;
+			$("#filter-count").text("Number of KoolPets = "+count);
+		});
+	});
 	
 	makeCats();
 
