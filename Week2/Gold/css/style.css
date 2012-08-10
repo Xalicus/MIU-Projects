@@ -68,8 +68,8 @@ article#KoolPetForm {
 
 div#searchPets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 1px -10px;
-	border: 1px solid #FF6600;
+	margin: 5px 5px;
+	/*border: 1px solid #FF6600;*/
 	padding: 3px;
 	background: #CCFFCC;
 	color: darkgreen;
@@ -77,7 +77,7 @@ div#searchPets {
 
 div#browsePets {
 	font-family: "Times New Roman", Times, serif;
-	margin: 1px -10px;
+	margin: 1px 5px;
 	border: 1px solid #FF6600;
 	padding: 3px;
 	background: #CCFFFF;
