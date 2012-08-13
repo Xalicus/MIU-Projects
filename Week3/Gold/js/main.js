@@ -18,8 +18,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 
 	// My Variables for the functions
-	var petGroups = ["--Choose A Pet Group--", "Dogs", "Cats", "Rodents", "Reptiles", 
-		"Birds", "Farm_Animals", "Mythical"];
+	var petGroups = ["--Choose A Pet Group--", "Birds", "Cats", "Dogs", "Farm_Animals", 
+					"Mythical", "Reptiles", "Rodents"];
 	var	genderValue;
 	var	faveValue = "No";
 	var	errMsg = gebi("errors");

@@ -154,29 +154,45 @@ Date: 08-16-2012
 				<ul id="errors"></ul>
 				
 				<ul id="questions">
-					<li id="petsType"><label for="petsType">* KoolPet Type:</label>
+					<div data-role="fieldcontain">
+					<li name="petsType" id="petsType"><label for="petsType">KoolPet Type: *</label>
 					</li>
-						
-					<li><label for="petName">* KoolPet's Name:</label>
-						<input type="text" id="petName" /></li>
-						
-					<li><label for="petEmail">* KoolPet Email:</label>
-						<input type="email" id="petEmail" /></li>
+					</div>
 					
-					<li><label for="genderValue">* Gender: </label>
+					<div data-role="fieldcontain">
+					<li><label for="petName">KoolPet's Name: *</label>
+						<input type="text" name="petName" id="petName" /></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+					<li><label for="petEmail">KoolPet Email: *</label>
+						<input type="email" name="petEmail" id="petEmail" /></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+					<li><label for="genderValue">Gender: *</label>
 						<ul class="checkbox">
 							<li><input type="radio" name="genderValue" value="Male" id="male" /><label for="male">Male</label></li>
 							<li><input type="radio" name="genderValue" value="Female" id="female" /><label for="female">Female</label></li>
 						</ul>
 					</li>
-						
+					</div>
+					
+					<div data-role="fieldcontain">
 					<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite KoolPet:</label></li>
+					</div>
 					
+					<div data-role="fieldcontain">
 					<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" /></label></li>
+					</div>
 					
+					<div data-role="fieldcontain">
 					<li><label for="koolness">Koolness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
+					</div>
 					
+					<div data-role="fieldcontain">
 					<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
+					</div>
 				</ul>
 			<input type="submit" value="Submit KoolPet Now" id="submit" /> 
 			<input type="reset" value="Reset Page" id="reset" />
