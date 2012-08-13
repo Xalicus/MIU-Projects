@@ -3,8 +3,8 @@
 /*
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 2
-Date: 08-09-2012
+Name: Project 3
+Date: 08-16-2012
 */
 
 // My Functions
