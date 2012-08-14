@@ -10,7 +10,7 @@ Date: 08-16-2012
 #charset "utf-8";
 
 * {
-	background-color: #CCFFCC;
+	background: #CCFFCC;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 	padding: 0px;
 	max-width: 640px;
 	text-align: center;
-	background-color: #CCFFCC;
+	background: #CCFFCC;
 }
 
 header {

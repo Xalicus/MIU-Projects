@@ -149,7 +149,7 @@ Date: 08-16-2012
 		</div>
 
 		<!-- Main body of page -->
-		<div data-role="content" id="petsearchbrowse" data-theme="b">
+		<div data-role="content" id="petsForm" data-theme="b">
 		<article id="KoolPetForm">
 			<h3>Choose the type of KoolPet you want!.</h3>
 				<nav>
@@ -166,12 +166,12 @@ Date: 08-16-2012
 					
 					<ul id="questions">
 						<div data-role="fieldcontain">
-						<li name="petsType" id="petsType"><label for="petsType">KoolPet Type A: *</label>
-						</li>
+							<div name="petsType" id="petsType"><label for="petsType">KoolPet Type A: *</label>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<li name="petsType" id="petsType">
+							<div name="petsType" id="petsType">
 								<label for="petsType">KoolPet Type B: *</label>
 								<select name="petsType" id="petsType" data-native-menu="true">
 									<option data-placeholder="true">-Choose A Group-</option>
@@ -191,70 +191,155 @@ Date: 08-16-2012
 										<option value="mythical">Magical Creatures</option>
 									</optgroup>
 								</select>
-							</li>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="petName">KoolPet's Name: *</label>
-							<input type="text" name="petName" id="petName" /></li>
+							<div>
+							<label for="petName">KoolPet's Name: *</label>
+								<input type="text" name="petName" id="petName" />
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="petEmail">KoolPet Email: *</label>
-							<input type="email" name="petEmail" id="petEmail" /></li>
+							<div>
+							<label for="petEmail">KoolPet Email: *</label>
+								<input type="email" name="petEmail" id="petEmail" />
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="genderValue">Gender A: *</label>
-							<ul class="checkbox">
-								<li><label for="male">Male</label><input type="radio" name="genderValue" value="Male" id="male" /></li>
-								<li><label for="female">Female</label><input type="radio" name="genderValue" value="Female" id="female" /></li>
-							</ul>
-						</li>
+							<div>
+							<label for="genderValue">Gender A: *</label>
+								<ul class="checkbox">
+									<li><label for="male">Male</label><input type="radio" name="genderValue" value="Male" id="male" /></li>
+									<li><label for="female">Female</label><input type="radio" name="genderValue" value="Female" id="female" /></li>
+								</ul>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<li><fieldset data-role="controlgroup" data-type="horizontal">
+							<div>
+							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend>Gender B: *</legend>
 								<input type="radio" value="Male" name="gender-value" id="genderValue1" />
 								<label for="genderValue1">Male</label>
 								<input type="radio" value="Female" name="gender-value" id="genderValue2" />
 								<label for="genderValue2">Female</label>
-							</fieldset></li>
+							</fieldset>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="favePet">Favorite KoolPet A:</label><input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" /></li>
+							<div>
+							<label for="favePet">Favorite KoolPet A:</label><input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" />
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<li><fieldset data-role="controlgroup" data-type="horizontal">
+							<div>
+							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend>Favorite KoolPet B:</legend>
 								<input type="checkbox" value="Male" name="favePet0" id="favePet1" />
 								<label for="favePet1">Yes</label>
 								<input type="checkbox" value="Female" name="favePet0" id="favePet2" />
 								<label for="favePet2">No</label>
-							</fieldset></li>
+							</fieldset>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" /></label></li>
+							<div>
+							<label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" /></label>
+							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="koolness">Koolness Factor:<input type="range" name="koolness" id="koolness" min="1" max="100" value="50" /></label></li>
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								<legend>Date of Birth:</legend>
+							
+								<label for="select-choice-month">Month</label>
+							<select name="select-choice-month" id="select-choice-month">
+								<option>Month</option>
+								<option value="jan">January</option>
+								<option value="feb">February</option>
+								<option value="mar">March</option>
+								<option value="apr">April</option>
+								<option value="may">May</option>
+								<option value="jun">June</option>
+								<option value="jul">July</option>
+								<option value="aug">August</option>
+								<option value="sep">September</option>
+								<option value="oct">October</option>
+								<option value="nov">November</option>
+								<option value="dec">December</option>
+							</select>
+							
+								<label for="select-choice-day">Day</label>
+							<select name="select-choice-day" id="select-choice-day">
+								<option>Day</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							
+							<label for="select-choice-year">Year</label>
+							<select name="select-choice-year" id="select-choice-year">
+								<option>Year</option>
+								<option value="2011">2011</option>
+								<!-- etc. -->
+							</select>
+							</fieldset>
 						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="kool1">Is the pet kool?:</label>
-						<select data-role="slider">
-							<option value="off">Nope</option>
-							<option value="on">Kool</option>
-						</select>
-						</li></div>
+							<div>
+							<label for="koolness">Koolness Factor:<input type="range" name="koolness" id="koolness" min="1" max="100" value="50" /></label>
+							</div>
+						</div>
 						
 						<div data-role="fieldcontain">
-						<li><label for="comments">Comments:</label><textarea name="comments" id="comments"></textarea></li>
+							<div>
+							<label for="kool1">Is the pet kool?:</label>
+							<select data-role="slider">
+								<option value="off">Nope</option>
+								<option value="on">Kool</option>
+							</select>
+							</div>
+						</div>
+						
+						<div data-role="fieldcontain">
+							<div>
+							<label for="comments">Comments:</label><textarea name="comments" id="comments"></textarea>
+							</div>
 						</div>
 					</ul>
 				<div data-role="fieldcontain">
