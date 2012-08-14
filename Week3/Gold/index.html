@@ -78,40 +78,58 @@ Date: 08-16-2012
 				<div data-role="collapsible-set">
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>1: Birds</h4>
-						<a href="#cs" id="Birds" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Birds.png" /> Browse Birds</a>
+						<a href="#cs" id="Birds" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Birds.png" /> Browse Birds</a>
 						<p>Flying creatures of all types.</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>2: Cats</h4>
-						<a href="#cs" id="Cats" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Cats.png" /> Browse Cats</a>
+						<a href="#cs" id="Cats" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Cats.png" /> Browse Cats</a>
 						<p>Felines big and small.</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>3: Dogs</h4>
-						<a href="#cs" id="Dogs" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Dogs.png" /> Browse Dogs</a>
+						<a href="#cs" id="Dogs" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Dogs.png" /> Browse Dogs</a>
 						<p>Canines up the Whazoo.</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>4: Farm Animals</h4>
-						<a href="#cs" id="Farm_Animals" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Farm_Animals.png" /> Browse Farm Animals</a>
+						<a href="#cs" id="Farm_Animals" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Farm_Animals.png" /> Browse Farm Animals</a>
 						<p>Animals you would find on a farm.</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>5: Mythical</h4>
-						<a href="#cs" id="Mythical" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Mythical.png" /> Browse Mythical</a>
+						<a href="#cs" id="Mythical" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Mythical.png" /> Browse Mythical</a>
 						<p>Dragons to Unicorns, we got 'em!</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>6: Reptiles</h4>
-						<a href="#cs" id="Reptiles" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Reptiles.png" /> Browse Reptiles</a>
+						<a href="#cs" id="Reptiles" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Reptiles.png" /> Browse Reptiles</a>
 						<p>Snakes, turtles, lizards, etc.</p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h4>7: Rodents</h4>
-						<a href="#cs" id="Rodents" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"><img src="images/Rodents.png" /> Browse Rodents</a>
+						<a href="#cs" id="Rodents" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">
+						<img src="images/Rodents.png" /> Browse Rodents</a>
 						<p>Rats, Mice, Chinchillas, and more.</p>
 					</div>
 				</div> <!-- end collapsible set -->
+				
+				<h3>Browse By Thumbnails</h3>
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><a href="#cs"><img src="images/Birds.png" /></a></div>
+					<div class="ui-block-b"><a href="#cs"><img src="images/Cats.png" /></a></div>
+					<div class="ui-block-c"><a href="#cs"><img src="images/Dogs.png" /></a></div>
+					<div class="ui-block-a"><a href="#cs"><img src="images/Farm_Animals.png" /></a></div>
+					<div class="ui-block-b"><a href="#cs"><img src="images/Mythical.png" /></a></div>
+					<div class="ui-block-c"><a href="#cs"><img src="images/Reptiles.png" /></a></div>
+					<div class="ui-block-a"><a href="#cs"><img src="images/Rodents.png" /></a></div>
+				</div><!-- /grid-b -->
 				
 			</div> <!-- end browsePets -->
 		</article>
@@ -254,12 +272,12 @@ Date: 08-16-2012
 							</div>
 						</div>
 						
-						<div data-role="fieldcontain">
+						<!-- <div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend>Date of Birth:</legend>
 							
-								<label for="select-choice-month">Month</label>
-							<select name="select-choice-month" id="select-choice-month">
+								<label for="month">Month</label>
+							<select name="month" id="month">
 								<option>Month</option>
 								<option value="jan">January</option>
 								<option value="feb">February</option>
@@ -275,8 +293,8 @@ Date: 08-16-2012
 								<option value="dec">December</option>
 							</select>
 							
-								<label for="select-choice-day">Day</label>
-							<select name="select-choice-day" id="select-choice-day">
+								<label for="day">Day</label>
+							<select name="day" id="day">
 								<option>Day</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -311,14 +329,14 @@ Date: 08-16-2012
 								<option value="31">31</option>
 							</select>
 							
-							<label for="select-choice-year">Year</label>
-							<select name="select-choice-year" id="select-choice-year">
+							<label for="year">Year</label>
+							<select name="year" id="year">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<!-- etc. -->
 							</select>
 							</fieldset>
-						</div>
+						</div> -->
 						
 						<div data-role="fieldcontain">
 							<div>
