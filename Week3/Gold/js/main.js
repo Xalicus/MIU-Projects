@@ -66,6 +66,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				gebi("clearData").style.display = "inline";
 				gebi("showData").style.display = "none";
 				gebi("addNew").style.display = "inline";
+				gebi("items").style.display = "inline";
 				break;
 			case "off":
 				gebi("petForm").style.display = "block";
@@ -177,7 +178,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function makeItemLinks(key, linksLi) {
 		// Add edit single item link
 		var editLink = document.createElement("a");
-		editLink.href = "#";
+		editLink.href = "#addItem";
 		editLink.key = key;
 		var editText = "Edit KoolPet";
 		editLink.addEventListener("click", editItem);
@@ -191,7 +192,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		// Add delete single item link
 		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
+		deleteLink.href = "#addItem";
 		deleteLink.key = key;
 		var deleteText = "Release KoolPet";
 		deleteLink.addEventListener("click", deleteItem);
@@ -345,6 +346,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			$("#filter-count").text("Number of KoolPets = "+count);
 		});
 	});
+	
+	
 	
 	makeCats();
 

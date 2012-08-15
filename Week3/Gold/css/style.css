@@ -66,7 +66,7 @@ div#petsearchbrowse {
 
 article#KoolPetForm {
 	margin: 2px 2px;
-	border: 1px solid #FF6600;
+	/*border: 1px solid #FF6600;*/
 	padding: 3px;
 	text-align: center;
 	background: #CCFFFF;
@@ -124,6 +124,13 @@ nav#addPetFeature {
 	border: 1px solid #FF6600;
 	padding: 3px;
 	/*background: #CCFFFF;*/
+}
+
+nav#showLoseAdd {
+	margin: 2px 2px;
+	padding: 3px;
+	text-align: center;
+	background: #CCFFCC;
 }
 
 nav#navi {

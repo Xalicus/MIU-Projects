@@ -49,29 +49,6 @@ Date: 08-16-2012
 		<div data-role="content" id="petsearchbrowse" data-theme="b">
 		
 		<article id="searchbrowse">
-			<!-- <div id="searchPets">
-				<form action="" method="post" id="searchForm" name="searchPets">
-					<label for="searchPets"><h3>Search Kev's KoolPetsDex</h3></label>
-					<input type="hidden" name="searchengine" value="http://www.google.com/search?q=site:http://Xalicus.github.com/MIU-Projects/Gold/+" />
-					<input type="search" name="search" id="searchPets" value="" data-mini="true" data-theme="b" />
-					<input type="submit" name="searchSubmit" value="Search" data-mini="true">
-					
-					<input type="text" name="searchKoolPets" data-mini="true">
-					<input type="submit" name="searchSubmit" value="Search KoolPets" data-mini="true">
-				</form> -->
-				
-				<!-- Live text search from "http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/" -->
-				<!-- <form id="live-search" action="" class="styled" method="post">
-					<fieldset>
-						<input type="text" class="text-input" id="filter" value="" />
-						<span id="filter-count"></span>
-					</fieldset>
-				</form>
-				<ol class="commentlist">
-				  <li>Comment #1</li>
-				  <li>Comment #2</li>
-				</ol>
-			</div> --> <!-- end searchPets -->
 			
 			<div id="browsePets">
 				<h3>Browse Kev's KoolPetsDex</h3>
@@ -144,6 +121,7 @@ Date: 08-16-2012
 					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
 					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
 					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false">News</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>
@@ -184,11 +162,12 @@ Date: 08-16-2012
 					
 					<ul id="questions">
 						<div data-role="fieldcontain">
-							<div name="petsType" id="petsType"><label for="petsType">KoolPet Type A: *</label>
+							<div name="petsType" id="petsType">
+							<label for="petsType">KoolPet Type: *</label>
 							</div>
 						</div>
 						
-						<div data-role="fieldcontain">
+						<!-- <div data-role="fieldcontain">
 							<div name="petsType" id="petsType">
 								<label for="petsType">KoolPet Type B: *</label>
 								<select name="petsType" id="petsType" data-native-menu="true">
@@ -210,7 +189,7 @@ Date: 08-16-2012
 									</optgroup>
 								</select>
 							</div>
-						</div>
+						</div> -->
 						
 						<div data-role="fieldcontain">
 							<div>
@@ -226,121 +205,56 @@ Date: 08-16-2012
 							</div>
 						</div>
 						
-						<div data-role="fieldcontain">
+						<!-- <div data-role="fieldcontain">
 							<div>
-							<label for="genderValue">Gender A: *</label>
+							<label for="genderValue">Gender: *</label>
 								<ul class="checkbox">
-									<li><label for="male">Male</label><input type="radio" name="genderValue" value="Male" id="male" /></li>
-									<li><label for="female">Female</label><input type="radio" name="genderValue" value="Female" id="female" /></li>
+									<li>
+									<label for="male">Male</label>
+									<input type="radio" name="genderValue" value="Male" id="male" />
+									</li>
+									<li>
+									<label for="female">Female</label>
+									<input type="radio" name="genderValue" value="Female" id="female" />
+									</li>
 								</ul>
 							</div>
-						</div>
-						
-						<div data-role="fieldcontain">
-							<div>
-							<fieldset data-role="controlgroup" data-type="horizontal">
-								<legend>Gender B: *</legend>
-								<input type="radio" value="Male" name="gender-value" id="genderValue1" />
-								<label for="genderValue1">Male</label>
-								<input type="radio" value="Female" name="gender-value" id="genderValue2" />
-								<label for="genderValue2">Female</label>
-							</fieldset>
-							</div>
-						</div>
-						
-						<div data-role="fieldcontain">
-							<div>
-							<label for="favePet">Favorite KoolPet A:</label><input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" />
-							</div>
-						</div>
-						
-						<div data-role="fieldcontain">
-							<div>
-							<fieldset data-role="controlgroup" data-type="horizontal">
-								<legend>Favorite KoolPet B:</legend>
-								<input type="checkbox" value="Male" name="favePet0" id="favePet1" />
-								<label for="favePet1">Yes</label>
-								<input type="checkbox" value="Female" name="favePet0" id="favePet2" />
-								<label for="favePet2">No</label>
-							</fieldset>
-							</div>
-						</div>
-						
-						<div data-role="fieldcontain">
-							<div>
-							<label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" /></label>
-							</div>
-						</div>
-						
-						<!-- <div data-role="fieldcontain">
-							<fieldset data-role="controlgroup" data-type="horizontal">
-								<legend>Date of Birth:</legend>
-							
-								<label for="month">Month</label>
-							<select name="month" id="month">
-								<option>Month</option>
-								<option value="jan">January</option>
-								<option value="feb">February</option>
-								<option value="mar">March</option>
-								<option value="apr">April</option>
-								<option value="may">May</option>
-								<option value="jun">June</option>
-								<option value="jul">July</option>
-								<option value="aug">August</option>
-								<option value="sep">September</option>
-								<option value="oct">October</option>
-								<option value="nov">November</option>
-								<option value="dec">December</option>
-							</select>
-							
-								<label for="day">Day</label>
-							<select name="day" id="day">
-								<option>Day</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-								<option value="19">19</option>
-								<option value="20">20</option>
-								<option value="21">21</option>
-								<option value="22">22</option>
-								<option value="23">23</option>
-								<option value="24">24</option>
-								<option value="25">25</option>
-								<option value="26">26</option>
-								<option value="27">27</option>
-								<option value="28">28</option>
-								<option value="29">29</option>
-								<option value="30">30</option>
-								<option value="31">31</option>
-							</select>
-							
-							<label for="year">Year</label>
-							<select name="year" id="year">
-								<option>Year</option>
-								<option value="2011">2011</option>
-								<!-- etc. -->
-							</select>
-							</fieldset>
 						</div> -->
 						
 						<div data-role="fieldcontain">
 							<div>
-							<label for="koolness">Koolness Factor:<input type="range" name="koolness" id="koolness" min="1" max="100" value="50" /></label>
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								<legend for="genderValue">Gender: *</legend>
+								<input type="radio" value="Male" name="genderValue" id="male" />
+								<label for="male">Male</label>
+								<input type="radio" value="Female" name="genderValue" id="female" />
+								<label for="female">Female</label>
+							</fieldset>
+							</div>
+						</div>
+						
+						<div data-role="fieldcontain">
+							<div>
+							<label for="favePet">Favorite KoolPet:</label>
+							<input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" />
+							</div>
+						</div>
+						
+						<!-- <div data-role="fieldcontain">
+							<div>
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								<legend for="favePet">Favorite KoolPet B:</legend>
+								<input type="checkbox" value="Yes" name="favePet1" id="favePet1" />
+								<label for="favePet1">Yes</label>
+								<input type="checkbox" value="No" name="favePet2" id="favePet1" />
+								<label for="favePet2">No</label>
+							</fieldset>
+							</div>
+						</div> -->
+						
+						<div data-role="fieldcontain">
+							<div>
+							<label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" /></label>
 							</div>
 						</div>
 						
@@ -351,6 +265,13 @@ Date: 08-16-2012
 								<option value="off">Nope</option>
 								<option value="on">Kool</option>
 							</select>
+							</div>
+						</div>
+						
+						<div data-role="fieldcontain">
+							<div>
+							<label for="koolness">Koolness Factor:</label>
+							<input type="range" name="koolness" id="koolness" min="1" max="100" value="50" />
 							</div>
 						</div>
 						
@@ -378,9 +299,10 @@ Date: 08-16-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
-					<li><a href="#addItem" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Add Pet</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
 					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false">News</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>
@@ -403,6 +325,13 @@ Date: 08-16-2012
 		</div> <!-- end header -->
 		
 		<div data-role="content" id="petsForm" data-theme="b">
+		
+			<nav id="showLoseAdd">
+				<a href="#showItem" id="showData" style="display:none;" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Show KoolPets</a> 
+				<a href="#addItem" id="clearData" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Release all KoolPets</a> 
+				<a href="#addItem" id="addNew" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Add New KoolPet</a>
+			</nav>
+			<br />
 			<!-- This is where the list of pets will appear. -->
 			<div id="items" class="itemlist" data-theme="b">
 			
@@ -425,9 +354,10 @@ Date: 08-16-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
 					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
 					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false">News</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>
@@ -484,9 +414,10 @@ Date: 08-16-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
 					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
-					<li><a href="#info" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">About Me</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false">News</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>
@@ -495,6 +426,61 @@ Date: 08-16-2012
 		</div> <!-- end footer -->
 	</div>
 	<!-- End Info Page -->
+	
+	
+	<!-- News Stream Page -->
+	<div data-role="page" id="news" data-add-back-btn="true" data-theme="b">
+		<div data-role="header" data-theme="b">
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>KoolPetsDex News Stream</h1>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" id="petsearchbrowse" data-theme="b">
+		<article>
+			<div id="news">
+				<h3>KoolPetsDex News Stream of DOOM!</h3>
+				
+				<h4>August 13th, 2012</h4>
+				<p>Started MIU 1208 Week 3.</p>
+				
+				<h4>August 6th, 2012</h4>
+				<p>Started MIU 1208 Week 2.</p>
+				
+				<h4>July 30th, 2012</h4>
+				<p>Started MIU 1208 Week 1.</p>
+				
+				<h4>May 31st, 2011</h4>
+				<p>Started Full Sail University.</p>
+				
+				<h4>August 8th, 1981</h4>
+				<p>I was born.</p>
+			</div>
+		</article>
+		</div> <!-- end content -->
+		
+	<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="b" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+			<div data-role="navbar" data-theme="b">
+				<ul>
+					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
+					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">News</a></li>
+				</ul>
+			</div><!-- /navbar -->
+			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer -->
+	</div>
+	<!-- End News Stream Page -->
 	
 	
 	<!-- Under Construction Page -->
@@ -527,9 +513,10 @@ Date: 08-16-2012
 			<nav id="navi">
 			<div data-role="navbar" data-theme="b">
 				<ul>
-					<li><a href="#home" data-role="button" data-ajax="false">Home</a></li>
+					<li><a href="#home" data-role="button" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
 					<li><a href="#addItem" data-role="button" data-ajax="false">Add Pet</a></li>
 					<li><a href="#info" data-role="button" data-ajax="false">About Me</a></li>
+					<li><a href="#news" data-role="button" data-ajax="false">News</a></li>
 				</ul>
 			</div><!-- /navbar -->
 			<small>&copy; 2012 Kevin Ward, All Rights Reserved.</small>

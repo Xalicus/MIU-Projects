@@ -59,7 +59,7 @@ article#KoolPetForm {
 	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 0px;
-	/*background: #CCFFFF;*/
+	background: #CCFFFF;
 }
 
 div#searchPets {
@@ -125,7 +125,7 @@ form {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
-	/*background: #CCFFCC;*/
+	background: #CCFFCC;
 }
 
 legend {
@@ -134,7 +134,7 @@ legend {
 }
 
 ul {
-	/*background: #CCFFCC;*/
+	background: #CCFFCC;
 }
 
 li {
