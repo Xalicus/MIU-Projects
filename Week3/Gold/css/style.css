@@ -111,6 +111,13 @@ div#author {
 	background: #CCFFFF;
 }
 
+div#news {
+	margin: 2px 2px;
+	border: 1px solid #FF6600;
+	padding: 3px;
+	background: #CCFFFF;
+}
+
 div#underconst {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
@@ -167,6 +174,14 @@ p {
 	letter-spacing: .02em;
 	text-align: center;
 	color: #006600;
+}
+
+p#greyText {
+	font-family: "Times New Roman", Times, serif;
+	line-height: 0.4em;
+	letter-spacing: .01em;
+	text-align: center;
+	color: #666;
 }
 
 a {

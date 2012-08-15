@@ -162,6 +162,16 @@ Date: 08-16-2012
 					
 					<ul id="questions">
 						<div data-role="fieldcontain">
+							<div>
+							<label for="kool1">What is your pet?:</label>
+							<select data-role="slider">
+								<option value="off">Lame</option>
+								<option value="on">Kool</option>
+							</select>
+							</div>
+						</div>
+						
+						<div data-role="fieldcontain">
 							<div name="petsType" id="petsType">
 							<label for="petsType">KoolPet Type: *</label>
 							</div>
@@ -194,14 +204,16 @@ Date: 08-16-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petName">KoolPet's Name: *</label>
-								<input type="text" name="petName" id="petName" value="KoolPet Name"/>
+								<input type="text" name="petName" id="petName" value="Fluffy"/>
+								<p id="greyText">Example:</p>
 							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petEmail">KoolPet Email: *</label>
-								<input type="email" name="petEmail" id="petEmail" value="example@gmail.com" />
+								<input type="email" name="petEmail" id="petEmail" value="example@petmail.com" />
+								<p id="greyText">Example:</p>
 							</div>
 						</div>
 						
@@ -261,18 +273,8 @@ Date: 08-16-2012
 						
 						<div data-role="fieldcontain">
 							<div>
-							<label for="kool1">Is the pet kool?:</label>
-							<select data-role="slider">
-								<option value="off">Nope</option>
-								<option value="on">Kool</option>
-							</select>
-							</div>
-						</div>
-						
-						<div data-role="fieldcontain">
-							<div>
 							<label for="koolness">Koolness Factor:</label>
-							<input type="range" name="koolness" id="koolness" data-highlight="true" min="0" max="100" value="50" step="5" />
+							<input type="range" name="koolness" id="koolness" data-highlight="true" min="0" max="100" value="50" step="5" data-theme="b" />
 							</div>
 						</div>
 						
@@ -385,6 +387,7 @@ Date: 08-16-2012
 		<div data-role="content" id="petsearchbrowse" data-theme="b">
 		<article>
 			<div id="author">
+				<div data-role="fieldcontain">
 				<h3>About the Author</h3>
 				<p>Hello User, My name is Kevin Ward.<br />
 				I study here at Full Sail University.
@@ -397,7 +400,9 @@ Date: 08-16-2012
 				<a href="http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/" data-ajax="false" rel="external">here</a>, 
 				and modified to fit my code.<br />
 				All images are used under creative commons act. All Rights Reserved.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>Links</h4>
 				<p><a href="#home" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Home</a>
 				<a href="../Gold/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Gold App</a>
@@ -405,6 +410,7 @@ Date: 08-16-2012
 				<a href="http://xalicus.github.com/MIU-Projects/Week2/Gold/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Gold App</a>
 				<a href="http://xalicus.github.com/MIU-Projects/Week2/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a>
 				</p>
+				</div>
 			</div>
 		</article>
 		</div> <!-- end content -->
@@ -445,22 +451,34 @@ Date: 08-16-2012
 		<div data-role="content" id="petsearchbrowse" data-theme="b">
 		<article>
 			<div id="news">
-				<h3>KoolPetsDex News Stream of DOOM!</h3>
+				<div data-role="fieldcontain">
+				<h3>KoolPetsDex News of DOOM!</h3>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>August 13th, 2012</h4>
 				<p>Started MIU 1208 Week 3.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>August 6th, 2012</h4>
 				<p>Started MIU 1208 Week 2.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>July 30th, 2012</h4>
 				<p>Started MIU 1208 Week 1.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>May 31st, 2011</h4>
 				<p>Started Full Sail University.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>August 8th, 1981</h4>
 				<p>I was born.</p>
+				</div>
 			</div>
 		</article>
 		</div> <!-- end content -->

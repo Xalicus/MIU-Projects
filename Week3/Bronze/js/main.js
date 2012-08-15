@@ -18,8 +18,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 
 	// My Variables for the functions
-	var petGroups = ["--Choose A Pet Group--", "Dogs", "Cats", "Rodents", "Reptiles", 
-		"Birds", "Farm_Animals", "Mythical"];
+	var petGroups = ["--Choose A Pet Group--", "Birds", "Cats", "Dogs", "Farm_Animals", 
+					"Mythical", "Reptiles", "Rodents"];
 	var	genderValue;
 	var	faveValue = "No";
 	var	errMsg = gebi("errors");
@@ -66,6 +66,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				gebi("clearData").style.display = "inline";
 				gebi("showData").style.display = "none";
 				gebi("addNew").style.display = "inline";
+				gebi("items").style.display = "inline";
 				break;
 			case "off":
 				gebi("petForm").style.display = "block";
@@ -98,24 +99,24 @@ window.addEventListener("DOMContentLoaded", function(){
 		getCheckboxValue();
 		
 		var item				= {};
-			item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
-			item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
-			item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
+			item.petGroups		= ["LamePet Type:", gebi("petGroups").value];
+			item.petName		= ["LamePet\'s Name:", gebi("petName").value];
+			item.petEmail		= ["LamePet Email:", gebi("petEmail").value];
 			item.genderValue	= ["Gender:", genderValue];
-			item.favePet		= ["Favorite KoolPet:", faveValue];
+			item.favePet		= ["Favorite LamePet:", faveValue];
 			item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
-			item.koolness		= ["Koolness Factor:", gebi("koolness").value];
+			item.koolness		= ["Lameness Factor:", gebi("koolness").value];
 			item.comments		= ["Comments:", gebi("comments").value];
 		// Save data into Local Storage: Use Stringify to convert the object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
-		alert("Pet saved to the KoolPetsDex!");
+		alert("Pet saved to the LamePetsDex!");
 	};
 
 	// My getData function
 	function getData() {
 		toggleControls("on");
 		if(localStorage.length === 0) {
-			alert("There are no Pets in the KoolPetsDex, so default KoolPets were added.");
+			alert("There are no Pets in the LamePetsDex, so default LamePets were added.");
 			autoFillData();
 		};
 		
@@ -177,9 +178,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	function makeItemLinks(key, linksLi) {
 		// Add edit single item link
 		var editLink = document.createElement("a");
-		editLink.href = "#";
+		editLink.href = "additem.html";
 		editLink.key = key;
-		var editText = "Edit KoolPet";
+		var editText = "Edit LamePet";
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
@@ -191,9 +192,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		// Add delete single item link
 		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
+		deleteLink.href = "additem.html";
 		deleteLink.key = key;
-		var deleteText = "Release KoolPet";
+		var deleteText = "Release LamePet";
 		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
@@ -230,7 +231,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		// Remove the initial listener from the input "save pet" button.
 		saveData.removeEventListener("click", submit);
 		// Change Submit button Value to Edit Button
-		gebi("submit").value = "Edit KoolPet";
+		gebi("submit").value = "Edit LamePet";
 		var editSubmit = gebi("submit");
 		
 		// Save the key value established in this function as a prop of the editSubmit event
@@ -241,23 +242,23 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	// My Delete Item Function
 	function deleteItem() {
-		var ask = confirm("Are you sure you want to release this KoolPet?");
+		var ask = confirm("Are you sure you want to release this LamePet?");
 		if (ask) {
 			localStorage.removeItem(this.key);
-			alert("KoolPet WAS Released!!!");
+			alert("LamePet WAS Released!!!");
 			window.location.reload();
 		} else {
-			alert("KoolPet was NOT Released!");
+			alert("LamePet was NOT Released!");
 		};
 	};
 	
 	// My Clear Data Function
 	function clearDataStorage() {
 		if(localStorage.length === 0) {
-			alert("No KoolPets in the KoolPetsDex.");
+			alert("No LamePets in the LamePetsDex.");
 		} else {
 			localStorage.clear();
-			alert("All KoolPets have been Released!");
+			alert("All LamePets have been Released!");
 			window.location.reload();
 			return false;
 		};
@@ -281,14 +282,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		// Pet Type Validation
 		if (getPetGroups.value === "--Choose A Pet Group--") {
-			var petGroupsError = "Please choose a KoolPet Group!";
+			var petGroupsError = "Please choose a LamePet Group!";
 			getPetGroups.style.border = "1px solid red";
 			messageArray.push(petGroupsError);
 		};
 		
 		// Pet Name Validation
 		if (getPetName.value === "") {
-			var petNameError = "Please enter a KoolPet Name!";
+			var petNameError = "Please enter a LamePet Name!";
 			getPetName.style.border = "1px solid red";
 			messageArray.push(petNameError);
 		};
@@ -297,7 +298,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var re = /^\w+([\.\-]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,3})+$/;
 		var re2 = /^([a-z0-9])([\w\.\-\+])+([a-z0-9])\@((\w)([\w\-]?)+\.)+([a-z]{2,6})$/;
 		if (!(re.exec(getPetEmail.value))) {
-			var petEmailError = "Please enter an email for your KoolPet!";
+			var petEmailError = "Please enter an email for your LamePet!";
 			getPetEmail.style.border = "1px solid red";
 			messageArray.push(petEmailError);
 		};
@@ -342,7 +343,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	 
 			// Update the count
 			var numberItems = count;
-			$("#filter-count").text("Number of KoolPets = "+count);
+			$("#filter-count").text("Number of LamePets = "+count);
 		});
 	});
 	

@@ -10,7 +10,7 @@ Date: 08-16-2012
 #charset "utf-8";
 
 * {
-	background: #CCFFCC;
+	background: #000000;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 	padding: 0px;
 	max-width: 640px;
 	text-align: center;
-	background: #CCFFCC;
+	background: #222222;
 }
 
 header {
@@ -59,7 +59,7 @@ article#KoolPetForm {
 	margin: 5px 0px;
 	border: 1px solid #FF6600;
 	padding: 0px;
-	background: #CCFFFF;
+	background: #333333;
 }
 
 div#searchPets {
@@ -67,7 +67,7 @@ div#searchPets {
 	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	/*background: #CCFFCC;*/
+	/*background: #333333;*/
 	color: #FF6600;
 }
 
@@ -81,7 +81,7 @@ div#browsePets {
 	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	/*background: #CCFFFF;*/
+	/*background: #333333;*/
 	color: #FF6600;
 }
 
@@ -94,21 +94,21 @@ div#author {
 	margin: 5px 2px;
 	border: 1px solid #FF6600;
 	padding: 2px;
-	/*background: #CCFFFF;*/
+	/*background: #333333;*/
 }
 
 div#news {
 	margin: 5px 2px;
 	border: 1px solid #FF6600;
 	padding: 2px;
-	/*background: #CCFFFF;*/
+	/*background: #333333;*/
 }
 
 div#underconst {
 	margin: 5px 5px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	/*background: #CCFFFF;*/
+	/*background: #333333;*/
 }
 
 div controlgroup {
@@ -132,7 +132,7 @@ form {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
-	background: #CCFFCC;
+	background: #333333;
 }
 
 legend {
@@ -141,7 +141,7 @@ legend {
 }
 
 ul {
-	background: #CCFFCC;
+	background: #333333;
 }
 
 li {
@@ -155,6 +155,14 @@ p {
 	letter-spacing: .02em;
 	text-align: center;
 	color: #FF6600;
+}
+
+p#greyText {
+	font-family: "Times New Roman", Times, serif;
+	line-height: 0.4em;
+	letter-spacing: .01em;
+	text-align: center;
+	color: #666;
 }
 
 a {
@@ -173,7 +181,7 @@ a#addPet {
 	padding: 5px;
 	color: #FF6600;
 	text-shadow: 1px 1px 2px #darkgreen;
-	/*background: #CCFFCC;*/
+	background: #222222;
 }
 
 span {

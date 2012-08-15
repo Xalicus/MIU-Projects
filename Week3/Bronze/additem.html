@@ -2,8 +2,8 @@
 <!--
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 2
-Date: 08-09-2012
+Name: Project 3
+Date: 08-16-2012
 -->
 
 <html lang="en">
@@ -13,7 +13,7 @@ Date: 08-09-2012
 	<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
 	<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
 		
-	<title>Kev's KoolPetsDex Bronze App</title>
+	<title>Kev's LamePetsDex Bronze App</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -35,17 +35,17 @@ Date: 08-09-2012
 	<!-- Header -->
 	<header>
 		<nav id="addPetFeature">
-			<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-			<br /><h2>Add a KoolPet!</h2>
+			<a href="index.html#home"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+			<br /><h2>Add a LamePet!</h2>
 		</nav>
 	</header>
 	<!-- Main body of page -->
 	<article id="KoolPetForm">
-	<h3>Choose the type of KoolPet you want!</h3>
+	<h3>Choose the type of LamePet you want!</h3>
 		<nav>
-		<a href="index.html#showitem" id="showData">Show KoolPets</a> 
-		<a href="additem.html" id="clearData">Release all KoolPets</a> 
-		<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
+		<a href="index.html#showitem" id="showData">Show LamePets</a> 
+		<a href="additem.html" id="clearData">Release all LamePets</a> 
+		<a href="additem.html" id="addNew" style="display:none;">Add New LamePet</a>
 		</nav>
 	<br />
 	<form action="#" method="post" id="petForm">
@@ -56,96 +56,50 @@ Date: 08-09-2012
 			
 			<ul id="questions">
 				<li id="petsType" name="petsType">
-					<label for="petsType">KoolPet Type: *</label>
+					<label for="petsType">LamePet Type: *</label>
+					<p id="greyText">Example: Mythical</p>
 				</li>
 					
-					<div data-role="fieldcontain">
-					<li name="petsType" id="petsType">
-						<label for="petsType">KoolPet Type: *</label>
-					</li>
-					</div>
-					
 				<li>
-					<label for="petName">KoolPet's Name: *</label>
+					<label for="petName">LamePet's Name: *</label>
 					<input type="text" id="petName" name="petName" />
+					<p id="greyText">Example: Fluffy</p>
 				</li>
-					
-					<div data-role="fieldcontain">
-					<li>
-						<label for="petName">KoolPet's Name: *</label>
-						<input type="text" name="petName" id="petName" />
-					</li>
-					</div>
 					
 				<li>
-					<label for="petEmail">KoolPet Email: *</label>
+					<label for="petEmail">LamePet Email: *</label>
 					<input type="email" id="petEmail" name="petEmail" />
+					<p id="greyText">Example: koolpet@lamepets.com</p>
 				</li>
-					
-					<div data-role="fieldcontain">
-					<li>
-						<label for="petEmail">KoolPet Email: *</label>
-						<input type="email" name="petEmail" id="petEmail" />
-					</li>
-					</div>
 					
 				<li>
 					<label for="genderValue">Gender: *</label>
 					<ul class="checkbox">
-						<li>
-							<input type="radio" name="genderValue" value="Male" id="male" />
+						<div>
 							<label for="male">Male</label>
-						</li>
-						<li>
-							<input type="radio" name="genderValue" value="Female" id="female" />
+							<input type="radio" name="genderValue" value="Male" id="male" />
+						</div>
+						<div>
 							<label for="female">Female</label>
-						</li>
+							<input type="radio" name="genderValue" value="Female" id="female" />
+						</div>
 					</ul>
 				</li>
 					
-					<div data-role="fieldcontain">
-					<li>
-					<label for="genderValue">Gender: *</label>
-						<ul class="checkbox">
-							<li>
-								<input type="radio" name="genderValue" value="Male" id="male" />
-								<label for="male">Male</label>
-							</li>
-							<li>
-								<input type="radio" name="genderValue" value="Female" id="female" />
-								<label for="female">Female</label>
-							</li>
-						</ul>
-					</li>
-					</div>
-					
 				<li>
-					<input type="checkbox" value="Yes" id="favePet" name="favePet" class="checkbox" />
-					<label for="favePet">Favorite KoolPet:</label>
+					<label for="favePet">Favorite LamePet:</label>
+					<input type="checkbox" value="Yes" id="favePet" name="favePet" class="checkbox" checked="unchecked" />
 				</li>
-				
-					<div data-role="fieldcontain">
-					<li>
-						<input type="checkbox" value="Yes" id="favePet" class="checkbox" />
-						<label for="favePet">Favorite KoolPet:</label>
-					</li>
-					</div>
 					
 				<li>
 					<label for="birthDate">Date of Birth:</label>
-					<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" name="birthDate" />
+					<input type="date" min="1900-01-01" max="2099-12-31" value="2001-09-11" id="birthDate" name="birthDate" />
+					<p id="greyText">Example: 08/09/1981</p>
 				</li>
 					
-					<div data-role="fieldcontain">
-					<li>
-						<label for="birthDate">Date of Birth:</label>
-						<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" />
-					</li>
-					</div>
-					
 				<li>
-					<label for="koolness">Koolness Factor:</label>
-					<input type="range" name="quantity" min="1" max="100" value="50" step="5" id="koolness" name="koolness" />
+					<label for="koolness">Lameness Factor:</label>
+					<input type="range" name="quantity" min="0" max="100" value="50" step="5" id="koolness" name="koolness" />
 				</li>
 					
 				<li>
@@ -163,7 +117,7 @@ Date: 08-09-2012
 		<nav id="navi">
 		<h3>Navigation:</h3>
 		<p><a href="index.html#home">Home</a> : 
-		<a href="additem.html">Add KoolPet</a> : 
+		<a href="additem.html">Add LamePet</a> : 
 		<a href="index.html#info">About Me</a> : 
 		<a href="index.html#news">News</a></p>
 		<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
