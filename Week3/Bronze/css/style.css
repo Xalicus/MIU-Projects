@@ -17,7 +17,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
-	max-width: 640px;
+	/*max-width: 640px;*/
 	text-align: center;
 	background: #222222;
 }
@@ -67,7 +67,7 @@ div#searchPets {
 	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	/*background: #333333;*/
+	background: #333333;
 	color: #FF6600;
 }
 
@@ -81,12 +81,22 @@ div#browsePets {
 	margin: 5px -10px;
 	border: 1px solid #FF6600;
 	padding: 5px;
-	/*background: #333333;*/
+	background: #333333;
 	color: #FF6600;
 }
 
 div#browsePets h3 {
 	font-family: "Times New Roman", Times, serif;
+	color: #FF6600;
+}
+
+div#petsForm {
+	background: #333333;
+	color: #FF6600;
+}
+
+div#item {
+	background: #333333;
 	color: #FF6600;
 }
 
@@ -180,7 +190,7 @@ a#addPet {
 	margin: 5px 1px;
 	padding: 5px;
 	color: #FF6600;
-	text-shadow: 1px 1px 2px #darkgreen;
+	text-shadow: 1px 1px 2px darkgreen;
 	background: #222222;
 }
 

@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				gebi("clearData").style.display = "inline";
 				gebi("showData").style.display = "none";
 				gebi("addNew").style.display = "inline";
-				gebi("items").style.display = "inline";
+				gebi("items").style.display = "block";
 				break;
 			case "off":
 				gebi("petForm").style.display = "block";
@@ -178,7 +178,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function makeItemLinks(key, linksLi) {
 		// Add edit single item link
 		var editLink = document.createElement("a");
-		editLink.href = "additem.html";
+		editLink.href = "#";
 		editLink.key = key;
 		var editText = "Edit LamePet";
 		editLink.addEventListener("click", editItem);
@@ -192,7 +192,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		// Add delete single item link
 		var deleteLink = document.createElement("a");
-		deleteLink.href = "additem.html";
+		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Release LamePet";
 		deleteLink.addEventListener("click", deleteItem);
