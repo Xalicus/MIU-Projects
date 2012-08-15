@@ -194,14 +194,14 @@ Date: 08-16-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petName">KoolPet's Name: *</label>
-								<input type="text" name="petName" id="petName" />
+								<input type="text" name="petName" id="petName" value="KoolPet Name"/>
 							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petEmail">KoolPet Email: *</label>
-								<input type="email" name="petEmail" id="petEmail" />
+								<input type="email" name="petEmail" id="petEmail" value="example@gmail.com" />
 							</div>
 						</div>
 						
@@ -225,7 +225,7 @@ Date: 08-16-2012
 							<div>
 							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend for="genderValue">Gender: *</legend>
-								<input type="radio" value="Male" name="genderValue" id="male" />
+								<input type="radio" value="Male" name="genderValue" id="male" checked="checked" />
 								<label for="male">Male</label>
 								<input type="radio" value="Female" name="genderValue" id="female" />
 								<label for="female">Female</label>
@@ -236,7 +236,7 @@ Date: 08-16-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="favePet">Favorite KoolPet:</label>
-							<input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" />
+							<input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" checked="checked" />
 							</div>
 						</div>
 						
@@ -254,7 +254,8 @@ Date: 08-16-2012
 						
 						<div data-role="fieldcontain">
 							<div>
-							<label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" /></label>
+							<label for="birthDate">Date of Birth:</label>
+							<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" name="birthDate" id="birthDate" />
 							</div>
 						</div>
 						
@@ -271,13 +272,13 @@ Date: 08-16-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="koolness">Koolness Factor:</label>
-							<input type="range" name="koolness" id="koolness" min="1" max="100" value="50" />
+							<input type="range" name="koolness" id="koolness" data-highlight="true" min="0" max="100" value="50" step="5" />
 							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
 							<div>
-							<label for="comments">Comments:</label><textarea name="comments" id="comments"></textarea>
+							<label for="comments">Comments:</label><textarea name="comments" id="comments">Place comments here...</textarea>
 							</div>
 						</div>
 					</ul>
