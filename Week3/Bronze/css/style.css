@@ -91,9 +91,16 @@ div#browsePets h3 {
 }
 
 div#author {
-	margin: 5px 5px;
+	margin: 5px 2px;
 	border: 1px solid #FF6600;
-	padding: 5px;
+	padding: 2px;
+	/*background: #CCFFFF;*/
+}
+
+div#news {
+	margin: 5px 2px;
+	border: 1px solid #FF6600;
+	padding: 2px;
 	/*background: #CCFFFF;*/
 }
 
