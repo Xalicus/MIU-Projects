@@ -159,6 +159,16 @@ legend {
 	color: #006600;
 }
 
+label.error {
+	display: block;
+	margin: 10px 0;
+	color: #CC0000;
+}
+
+#aierrorsLink {
+	display: none;
+}
+
 ul {
 	background: #CCFFCC;
 }

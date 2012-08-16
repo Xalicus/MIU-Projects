@@ -1,11 +1,32 @@
-// write your javascript in here
-
 /*
 Author: Kevin Ward
 Class: MIU1208
 Name: Project 3
 Date: 08-16-2012
 */
+
+// My Main Validate function
+
+$("#addItem").on("pageinit", function(){
+
+	var myForm = $("#petForm"),
+		aierrorsLink = $("#aierrorsLink")
+		;
+	
+		myForm.validate({
+		invalidHandler: function(form, validator) {
+			aierrorsLink.click();
+		},
+		submitHandler: function() {
+			var data = myForm.serializeArray();
+			storeData(data);
+	}
+});
+
+});
+
+
+
 
 // My Functions
 //This is to wait until the DOM is fully loaded and ready.
@@ -30,6 +51,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			selectLi = gebi("petsType"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "petGroups");
+			makeSelect.setAttribute("class", "required");
 		for (var i=0, j=petGroups.length; i<j; i++) {
 			var makeOption = document.createElement("option");
 			var optTxt = petGroups[i];

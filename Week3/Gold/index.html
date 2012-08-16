@@ -204,16 +204,16 @@ Date: 08-16-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petName">KoolPet's Name: *</label>
-								<input type="text" name="petName" id="petName" value="Fluffy"/>
-								<p id="greyText">Example:</p>
+								<input type="text" name="petName" id="petName" value="" class="required" />
+								<p id="greyText">Example: Fluffy</p>
 							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
 							<div>
 							<label for="petEmail">KoolPet Email: *</label>
-								<input type="email" name="petEmail" id="petEmail" value="example@petmail.com" />
-								<p id="greyText">Example:</p>
+								<input type="email" name="petEmail" id="petEmail" value="" class="required" email />
+								<p id="greyText">Example: example@petmail.com</p>
 							</div>
 						</div>
 						
@@ -237,7 +237,7 @@ Date: 08-16-2012
 							<div>
 							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend for="genderValue">Gender: *</legend>
-								<input type="radio" value="Male" name="genderValue" id="male" checked="checked" />
+								<input type="radio" value="Male" name="genderValue" id="male" checked="checked" class="required" />
 								<label for="male">Male</label>
 								<input type="radio" value="Female" name="genderValue" id="female" />
 								<label for="female">Female</label>
@@ -292,6 +292,9 @@ Date: 08-16-2012
 				</div>
 				<!-- <input type="submit" value="Submit KoolPet" id="submit" /> 
 				<input type="reset" value="Reset Page" id="reset" /> -->
+				
+				<a href="#addItemErrors" id="aierrorsLink" data-rel="dialog" data-transition="pop">Open box of worms</a>
+				
 				</fieldset>
 			</form>
 		</article>
@@ -546,12 +549,35 @@ Date: 08-16-2012
 	</div>
 	<!-- End Under Construction Page -->
 	
+	
+	<!-- Add Item Errors Page -->
+	<div data-role="dialog" id="addItemErrors" data-theme="b">
+		<!-- Header -->
+		<div data-role="header" data-theme="b">
+		<header>
+			<nav id="addPetFeature">
+				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>I am Error.</h1>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" id="petsearchbrowse" data-theme="b">
+			<ul>
+				<li>Test</li>
+			</ul>
+		</div> <!-- end content -->
+	</div>
+	<!-- End Add Item Errors Page -->
+	
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
 	<script src="js/json.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/Sample-main.js" type="text/javascript"></script>
 
 	
 </body>
