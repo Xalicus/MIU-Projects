@@ -328,7 +328,7 @@ var getData = function(){
 
 // My storeData function
 // var submit = function(key){
-var storeData = function(key){
+var submit = function(key){
 	// If there isn't a key, this means this is a brand new item and we need a new key.
 	if (!key) {
 		var id				= Math.floor(Math.random()*1000001);
@@ -393,7 +393,7 @@ var clearDataStorage = function(){
 	showData.addEventListener("click", getData);
 	var clearLink = gebi("clearData");	
 	clearLink.addEventListener("click", clearDataStorage);
-	var saveData = gebi("storeData");
+	var saveData = gebi("submit");
 	saveData.addEventListener("click", submit);
 
 
