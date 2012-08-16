@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Author: Kevin Ward
+Class: MIU1208
+Name: Project 3
+Date: 08-16-2012
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
+	<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
+		
+	<title>Kev's LamePetsDex Bronze App</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<nav id="addPetFeature">
+			<a href="index.html#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+			<br /><h2>Add a LamePet!</h2>
+		</nav>
+	</header>
+	<!-- Main body of page -->
+	<article id="KoolPetForm">
+	<h3>Choose the type of LamePet you want!</h3>
+		<nav>
+		<a href="index.html#showitem" id="showData" data-ajax="false" rel="external">Show LamePets</a> 
+		<a href="additem.html" id="clearData" data-ajax="false" rel="external">Release all LamePets</a> 
+		<a href="additem.html" id="addNew" style="display:none;" data-ajax="false" rel="external">Add New LamePet</a>
+		</nav>
+	<br />
+	<form action="#" method="post" id="petForm" data-role="none">
+		<fieldset id="petFieldset">
+			<legend>Choose Wisely!</legend>
+			<span>* Fields are required</span>
+			
+			<ul id="questions">
+				<li id="petsType" name="petsType">
+					<label for="petsType">LamePet Type: *</label>
+						<select id="petGroups">
+							<option value="--Choose A Pet Group--">--Choose A Pet Group--</option>
+							<option value="Birds">Birds</option>
+							<option value="Cats">Cats</option>
+							<option value="Dogs">Dogs</option>
+							<option value="Farm_Animals">Farm_Animals</option>
+							<option value="Mythical">Mythical</option>
+							<option value="Reptiles">Reptiles</option>
+							<option value="Rodents">Rodents</option>
+						</select>
+					<p id="greyText">Example: Mythical</p>
+				</li>
+					
+				<li>
+					<label for="petName">LamePet's Name: *</label>
+					<input type="text" id="petName" />
+					<p id="greyText">Example: Fluffy</p>
+				</li>
+					
+				<li>
+					<label for="petEmail">LamePet Email: *</label>
+					<input type="email" id="petEmail" />
+					<p id="greyText">Example: koolpet@lamepets.com</p>
+				</li>
+					
+				<li>
+					<label for="genderValue">Gender: *</label>
+					<ul class="checkbox">
+						<div>
+							<label for="male">Male</label>
+							<input type="radio" name="genderValue" value="Male" id="male" />
+						</div>
+						<div>
+							<label for="female">Female</label>
+							<input type="radio" name="genderValue" value="Female" id="female" />
+						</div>
+					</ul>
+				</li>
+					
+				<li>
+					<label for="favePet">Favorite LamePet:</label>
+					<input type="checkbox" value="Yes" id="favePet" class="checkbox" checked="unchecked" />
+				</li>
+					
+				<li>
+					<label for="birthDate">Date of Birth:</label>
+					<input type="date" min="1900-01-01" max="2099-12-31" value="2001-09-11" id="birthDate" />
+					<p id="greyText">Example: 08/09/1981</p>
+				</li>
+					
+				<li>
+					<label for="koolness">Lameness Factor:</label>
+					<input type="range" name="quantity" min="0" max="100" value="50" step="5" id="koolness" />
+				</li>
+					
+				<li>
+					<label for="comments">Comments:</label>
+					<textarea id="comments"></textarea>
+				</li>
+			</ul>
+			<input type="reset" value="Reset Page" id="reset" name="reset" />
+			<input type="submit" value="Submit KoolPet Now" id="submit" name="submit" />
+			
+			<ul id="errors"></ul>
+			
+		</fieldset>
+	</form>
+	</article>
+	<!-- Footer -->
+	<footer>
+		<nav id="navi">
+		<h3>Navigation:</h3>
+		<p><a href="index.html#home" data-ajax="false" rel="external">Home</a> : 
+		<a href="additem.html" data-ajax="false" rel="external">Add LamePet</a> : 
+		<a href="index.html#info" data-ajax="false" rel="external">About Me</a> : 
+		<a href="index.html#news" data-ajax="false" rel="external">News</a></p>
+		<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+		</nav>
+	</footer>
+	
+	
+	<!-- Link JavaScript -->
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	
+</body>
+</html>

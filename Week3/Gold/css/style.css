@@ -3,8 +3,8 @@
 /*
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 2
-Date: 08-09-2012
+Name: Project 3
+Date: 08-16-2012
 */
 
 #charset "utf-8";
@@ -31,21 +31,25 @@ header {
 
 h1 {
 	font-family: "Times New Roman", Times, serif;
+	text-align: center;
 	color: darkgreen;
 }
 
 h2 {
 	font-family: "Times New Roman", Times, serif;
+	text-align: center;
 	color: darkgreen;
 }
 
 h3 {
 	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
 	color: darkgreen;
 }
 
 h4 {
 	font-family: Arial, helvetica, sans-serif;
+	text-align: center;
 	color: darkgreen;
 }
 
@@ -57,13 +61,20 @@ article {
 
 div#petsearchbrowse {
 	background: #CCFFCC;
+	text-align: center;
 }
 
 article#KoolPetForm {
 	margin: 2px 2px;
-	border: 1px solid #FF6600;
+	/*border: 1px solid #FF6600;*/
 	padding: 3px;
+	text-align: center;
 	background: #CCFFFF;
+}
+
+div {
+	text-align: left;
+	color: #006600;
 }
 
 div#searchPets {
@@ -86,7 +97,7 @@ div#browsePets {
 
 div#petsForm {
 	font-family: "Times New Roman", Times, serif;
-	margin: 1px -10px;
+	margin: 1px 5px;
 	border: 1px solid #FF6600;
 	padding: 3px;
 	background: #CCFFCC;
@@ -100,11 +111,19 @@ div#author {
 	background: #CCFFFF;
 }
 
+div#news {
+	margin: 2px 2px;
+	border: 1px solid #FF6600;
+	padding: 3px;
+	background: #CCFFFF;
+}
+
 div#underconst {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
 	background: #CCFFFF;
+	text-align: center;
 }
 
 nav#addPetFeature {
@@ -112,6 +131,13 @@ nav#addPetFeature {
 	border: 1px solid #FF6600;
 	padding: 3px;
 	/*background: #CCFFFF;*/
+}
+
+nav#showLoseAdd {
+	margin: 2px 2px;
+	padding: 3px;
+	text-align: center;
+	background: #CCFFCC;
 }
 
 nav#navi {
@@ -133,6 +159,16 @@ legend {
 	color: #006600;
 }
 
+label.error {
+	display: block;
+	margin: 10px 0;
+	color: #CC0000;
+}
+
+#aierrorsLink {
+	display: none;
+}
+
 ul {
 	background: #CCFFCC;
 }
@@ -148,6 +184,14 @@ p {
 	letter-spacing: .02em;
 	text-align: center;
 	color: #006600;
+}
+
+p#greyText {
+	font-family: "Times New Roman", Times, serif;
+	line-height: 0.4em;
+	letter-spacing: .01em;
+	text-align: center;
+	color: #666;
 }
 
 a {

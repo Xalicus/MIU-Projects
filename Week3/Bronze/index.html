@@ -2,8 +2,8 @@
 <!--
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 2
-Date: 08-09-2012
+Name: Project 3
+Date: 08-16-2012
 -->
 
 <html lang="en">
@@ -13,7 +13,7 @@ Date: 08-09-2012
 	<meta name="description" content="Kev's KoolPetsDex Mobile Web App." />
 	<meta name="keywords" content="html5, mobile development, Full Sail University, pets, apps" />
 		
-	<title>Kev's KoolPetsDex Bronze App</title>
+	<title>Kev's LamePetsDex Bronze App</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -38,10 +38,10 @@ Date: 08-09-2012
 		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
-				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h1>Kev's KoolPetsDex</h1>
-				<p>Click here to add more KoolPets!</p>
-				<p><a href="#additem" id="addPet" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">ADD A KOOLPET NOW!</a></p>
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>Kev's LamePetsDex</h1>
+				<p>Click here to add more LamePets!</p>
+				<p><a href="additem.html" id="addPet" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false" rel="external">ADD A LAMEPET NOW!</a></p>
 			</nav>
 		</header>
 		</div> <!-- end header -->
@@ -51,38 +51,38 @@ Date: 08-09-2012
 		<article>
 			<div id="browsePets">
 				<!-- <fieldset id="browsePet" data-mini="true"> -->
-				<h3>Browse KoolPets</h3>
+				<h3>Browse LamePets</h3>
 				<ul data-role="listview" data-inset="true" data-filter="true" data-theme="a">
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Birds.png" height="80" width="80" />
 						<h3>Birds</h3>
 						<p>Flying creatures of all types.</p>
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Cats.png" height="80" width="80" />
 						<h3>Cats</h3>
 						<p>Felines big and small.</p>
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Dogs.png" height="80" width="80" />
 						<h3>Dogs</h3>
 						<p>Canines up the Whazoo.</p>
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Farm_Animals.png" height="80" width="80" />
 						<h3>Farm Animals</h3>
 						<p>Animals you would find on a farm.</p>
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Mythical.png" height="80" width="80" />
 						<h3>Mythical</h3>
 						<p>Dragons to Unicorns, we got 'em!</p>
@@ -90,14 +90,14 @@ Date: 08-09-2012
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Reptiles.png" height="80" width="80" />
 						<h3>Reptiles</h3>
 						<p>Snakes, turtles, lizards, etc.</p>
 						</a>
 					</li>
 					<li>
-						<a href="#cs">
+						<a href="#cs" data-ajax="false" rel="external">
 						<img src="images/Rodents.png" height="80" width="80" />
 						<h3>Rodents</h3>
 						<p>Rats, Mice, Chinchillas, and more.</p>
@@ -114,9 +114,10 @@ Date: 08-09-2012
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<p><a href="#home" data-role="button">Home</a>
-				<a href="#additem" data-role="button">Add KoolPet</a>
-				<a href="#info" data-role="button">About Me</a></p>
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
 				</div>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>
@@ -124,6 +125,7 @@ Date: 08-09-2012
 		</div> <!-- end footer-->
 	</div> <!-- end Home Page -->
 	
+	<!--
 	<!-- Add Item Page -->
 	<div data-role="page" id="additem" data-add-back-btn="true" data-theme="a">
 	
@@ -131,8 +133,8 @@ Date: 08-09-2012
 		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
-				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h2>Add a KoolPet!</h2>
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Add a LamePet!</h2>
 			</nav>
 		</header>
 		</div> <!-- end header -->
@@ -140,11 +142,11 @@ Date: 08-09-2012
 		<!-- Main body of page -->
 		<div data-role="content" data-theme="a">
 		<article id="KoolPetForm">
-		<h3>Choose the type of KoolPet you want!.</h3>
+		<h3>Choose the type of LamePet you want!</h3>
 			<nav>
-			<a href="#showitem" id="showData">Show KoolPets</a> 
-			<a href="#showitem" id="clearData">Release all KoolPets</a> 
-			<a href="additem.html" id="addNew" style="display:none;">Add New KoolPet</a>
+			<a href="#showitem" id="showData" data-ajax="false" rel="external">Show LamePets</a> 
+			<a href="additem.html" id="clearData" data-ajax="false" rel="external">Release all LamePets</a> 
+			<a href="additem.html" id="addNew" style="display:none;" data-ajax="false" rel="external">Add New LamePet</a>
 			</nav>
 		<br />
 		<form action="#" method="post" id="petForm" data-role="none">
@@ -154,31 +156,49 @@ Date: 08-09-2012
 				<ul id="errors"></ul>
 				
 				<ul id="questions">
-					<li id="petsType"><label for="petsType">* KoolPet Type:</label>
-					</li>
-						
-					<li><label for="petName">* KoolPet's Name:</label>
-						<input type="text" id="petName" /></li>
-						
-					<li><label for="petEmail">* KoolPet Email:</label>
-						<input type="email" id="petEmail" /></li>
+					<div data-role="fieldcontain">
+					<li name="petsType" id="petsType" data-theme="a">
+					<label for="petsType">LamePet Type: *</label>
 					
-					<li><label for="genderValue">* Gender: </label>
+					</li>
+					</div>
+					
+					<div data-role="fieldcontain">
+					<li><label for="petName">LamePet's Name: *</label>
+						<input type="text" name="petName" id="petName" /></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+					<li><label for="petEmail">LamePet Email: *</label>
+						<input type="email" name="petEmail" id="petEmail" /></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+					<li><label for="genderValue">Gender: *</label>
 						<ul class="checkbox">
 							<li><input type="radio" name="genderValue" value="Male" id="male" /><label for="male">Male</label></li>
 							<li><input type="radio" name="genderValue" value="Female" id="female" /><label for="female">Female</label></li>
 						</ul>
 					</li>
-						
-					<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite KoolPet:</label></li>
+					</div>
 					
+					<div data-role="fieldcontain">
+					<li><input type="checkbox" value="Yes" id="favePet" class="checkbox" /><label for="favePet">Favorite LamePet:</label></li>
+					</div>
+					
+					<div data-role="fieldcontain">
 					<li><label for="birthDate">Date of Birth:<input type="date" min="1900-01-01" max="2099-12-31" value="2012-07-04" id="birthDate" /></label></li>
+					</div>
 					
-					<li><label for="koolness">Koolness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
+					<div data-role="fieldcontain">
+					<li><label for="koolness">Lameness Factor:<input type="range" name="quantity" min="1" max="100" value="50" id="koolness"/></label></li>
+					</div>
 					
+					<div data-role="fieldcontain">
 					<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
+					</div>
 				</ul>
-			<input type="submit" value="Submit KoolPet Now" id="submit" /> 
+			<input type="submit" value="Submit LamePet Now" id="submit" /> 
 			<input type="reset" value="Reset Page" id="reset" />
 			</fieldset>
 		</form>
@@ -190,24 +210,25 @@ Date: 08-09-2012
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<p><a href="#home" data-role="button">Home</a>
-				<a href="#additem" data-role="button">Add KoolPet</a>
-				<a href="#info" data-role="button">About Me</a></p>
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
 				</div>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>
 		</footer>
 		</div> <!-- end footer-->
 	</div> <!-- end Add Item Page -->
-	
+	-->
 	
 	<!-- Show Item Page -->
 	<div data-role="page" id="showitem" data-add-back-btn="true" data-theme="a">
 		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
-				<a href="#home"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h2>Show KoolPets!</h2>
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h2>Show LamePets!</h2>
 			</nav>
 		</header>
 		</div> <!-- end header -->
@@ -233,9 +254,10 @@ Date: 08-09-2012
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<p><a href="#home" data-role="button">Home</a>
-				<a href="#additem" data-role="button">Add KoolPet</a>
-				<a href="#info" data-role="button">About Me</a></p>
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
 				</div>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>
@@ -252,8 +274,8 @@ Date: 08-09-2012
 		<!-- Header -->
 		<header>
 			<nav id="addPetFeature">
-				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h1>About KoolPetsDex</h1>
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>About LamePetsDex</h1>
 			</nav>
 		</header>
 		</div> <!-- end header -->
@@ -262,21 +284,30 @@ Date: 08-09-2012
 		<div data-role="content" data-theme="a">
 		<article>
 			<div id="author">
+				<div data-role="fieldcontain">
 				<h3>About the Author</h3>
-				<p>Hello User, My name is Kevin Ward. I study at Full Sail University.
-				I created this page to tell a little about me, and my web app KoolPetsDex.
+				<p>Hello User, My name is Kevin Ward.<br />
+				I study here at Full Sail University.
+				I created this page to tell a little about me, and my web app LamePetsDex.<br />
 				I created all the HTML, JS, and CSS. The Joker Face image was also created 
-				by me. The Animal category images were made by my lovely wife Katrina Ward.
+				by me. The animal category images were made by my lovely wife Katrina Ward.<br />
 				The under construction image was found 
-				<a href="http://www.donotenter.com/cool/ucgraphics/large/page4/index.htm">here.</a>
+				<a href="http://www.donotenter.com/cool/ucgraphics/large/page4/index.htm" data-ajax="false" rel="external">here.</a><br />
+				Live Text Search function was found 
+				<a href="http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/" data-ajax="false" rel="external">here</a>, 
+				and modified to fit my code.<br />
 				All images are used under creative commons act. All Rights Reserved.</p>
+				</div>
 				
+				<div data-role="fieldcontain">
 				<h4>Links</h4>
 				<p><a href="#home" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Home</a>
 				<a href="../Gold/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Gold App</a>
 				<a href="../Bronze/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Bronze App</a><br />
 				<a href="http://xalicus.github.com/MIU-Projects/Week2/Gold/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Gold App</a>
-				<a href="http://xalicus.github.com/MIU-Projects/Week2/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a></p>
+				<a href="http://xalicus.github.com/MIU-Projects/Week2/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a>
+				</p>
+				</div>
 			</div>
 		</article>
 		</div>
@@ -286,9 +317,10 @@ Date: 08-09-2012
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<p><a href="#home" data-role="button">Home</a>
-				<a href="#additem" data-role="button">Add KoolPet</a>
-				<a href="#info" data-role="button">About Me</a></p>
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
 				</div>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>
@@ -297,14 +329,80 @@ Date: 08-09-2012
 	</div> <!-- end Info Page -->
 	
 	
+	<!-- News Stream Page -->
+	<!-- Header -->
+	<div data-role="page" id="news" data-add-back-btn="true" data-theme="a">
+		<div data-role="header" data-theme="a">
+		<header>
+			<nav id="addPetFeature">
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>LamePetsDex News Stream</h1>
+			</nav>
+		</header>
+		</div> <!-- end header -->
+		
+		<!-- Main body of page -->
+		<div data-role="content" id="petsearchbrowse" data-theme="a">
+		<article>
+			<div id="news">
+				<div data-role="fieldcontain">
+				<h3>LamePetsDex News of DOOM!</h3>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>August 13th, 2012</h4>
+				<p>Started MIU 1208 Week 3.</p>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>August 6th, 2012</h4>
+				<p>Started MIU 1208 Week 2.</p>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>July 30th, 2012</h4>
+				<p>Started MIU 1208 Week 1.</p>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>May 31st, 2011</h4>
+				<p>Started Full Sail University.</p>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>August 8th, 1981</h4>
+				<p>I was born.</p>
+				</div>
+			</div>
+		</article>
+		</div> <!-- end content -->
+		
+	<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="navfooter">
+		<footer>
+			<nav id="navi">
+				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
+				</div>
+			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
+			</nav>
+		</footer>
+		</div> <!-- end footer -->
+	</div>
+	<!-- End News Stream Page -->
+	
+	
 	<!-- Coming Soon Page -->
 	<div data-role="page" id="cs" data-add-back-btn="true" data-theme="a">
 		<!-- Header -->
 		<div data-role="header" data-theme="a">
 		<header>
 			<nav id="addPetFeature">
-				<a href="index.html"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
-				<br /><h1>Under Construction</h1>
+				<a href="#home" data-ajax="false" rel="external"><img src="images/img.png" width="60" height="75" title="My Joker Face." /></a>
+				<br /><h1>Under Lame Construction</h1>
 			</nav>
 		</header>
 		</div> <!-- end header -->
@@ -313,10 +411,10 @@ Date: 08-09-2012
 		<div data-role="content" data-theme="a">
 		<article>
 			<div id="underconst">
-				<h3>Oops... You found our hideout!</h3>
+				<h3>Oops... You found our Lame hideout!</h3>
 				<img src="images/uc2_large02.gif" title="Under Construction" />
 				<p>Since you found us out, I'll lead you back home.<br />
-				Click here to go <a href="#home">Home</a></p>
+				Click here to go <a href="#home" data-ajax="false" rel="external">Home</a></p>
 			</div>
 		</article>
 		</div> <!-- end conent -->
@@ -326,9 +424,10 @@ Date: 08-09-2012
 		<footer>
 			<nav id="navi">
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<p><a href="#home" data-role="button">Home</a>
-				<a href="#additem" data-role="button">Add KoolPet</a>
-				<a href="#info" data-role="button">About Me</a></p>
+				<p><a href="#home" data-role="button" data-ajax="false" rel="external">Home</a>
+				<a href="additem.html" data-role="button" data-ajax="false" rel="external">Add LamePet</a>
+				<a href="#info" data-role="button" data-ajax="false" rel="external">About Me</a>
+				<a href="#news" data-role="button" data-ajax="false" rel="external">News</a></p>
 				</div>
 			<small>&copy;2012 Kevin Ward, All Rights Reserved.</small>
 			</nav>

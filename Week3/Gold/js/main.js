@@ -1,35 +1,64 @@
-// write your javascript in here
-
 /*
 Author: Kevin Ward
 Class: MIU1208
-Name: Project 2
-Date: 08-09-2012
+Name: Project 3
+Date: 08-16-2012
 */
 
-// My Functions
-//This is to wait until the DOM is fully loaded and ready.
-window.addEventListener("DOMContentLoaded", function(){
+
+$("#home").on("pageinit", function(){
+	//code needed for home page goes here
+});	
+		
+$('#addItem').on('pageinit', function(){
+
+		var myForm = $("#petForm"),
+			aierrorsLink = $("#aierrorsLink")
+			;
+		
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+				aierrorsLink.click();
+				//console.log(validator.submitted);
+				var html = '';
+				for(var key in validator.submitted) {
+					var label = $('label[for^="' + key + '"]').not('generated');
+					var legend = label.closest('fieldset').find('ui-controlgroup-label');
+					var fieldName = legend.length ? legend.text() : label.text();
+					html += '<li>' + fieldName + '</li>';
+				};
+				$("#addItemErrors ul").html(html);
+				
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(key);
+		}
+	});
+	
+	//any other code needed for addItem page goes here
+
 
 	// My getElementById or gebi function
-	function gebi(x){
+	var gebi = function(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	};
 
 	// My Variables for the functions
-	var petGroups = ["--Choose A Pet Group--", "Dogs", "Cats", "Rodents", "Reptiles", 
-		"Birds", "Farm_Animals", "Mythical"];
+	var petGroups = ["--Choose A Pet Group--", "Birds", "Cats", "Dogs", "Farm_Animals", 
+					"Mythical", "Reptiles", "Rodents"];
 	var	genderValue;
 	var	faveValue = "No";
 	var	errMsg = gebi("errors");
 
 	// Create select field element and populate with options.
-	function makeCats() {
+	var makeCats = function() {
 		var formTag = document.getElementsByTagName("petForm"),
 			selectLi = gebi("petsType"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "petGroups");
+			makeSelect.setAttribute("class", "required");
 		for (var i=0, j=petGroups.length; i<j; i++) {
 			var makeOption = document.createElement("option");
 			var optTxt = petGroups[i];
@@ -41,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 	
 	// Find the value of selected radio button.
-	function getSelectedRadio() {
+	var getSelectedRadio = function() {
 		var radio = document.forms[0].genderValue;
 		for (var i=0; i<radio.length; i++) {
 			if (radio[i].checked) {
@@ -51,7 +80,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 	
 	// Finds the value of the Checkbox
-	function getCheckboxValue(){
+	var getCheckboxValue = function(){
 		if (gebi("favePet").checked) {
 			faveValue = gebi("favePet").value;
 		} else {
@@ -59,13 +88,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
-	function toggleControls(n) {
+	var toggleControls = function(n) {
 		switch(n) {
 			case "on":
 				gebi("petForm").style.display = "none";
 				gebi("clearData").style.display = "inline";
 				gebi("showData").style.display = "none";
 				gebi("addNew").style.display = "inline";
+				gebi("items").style.display = "inline";
 				break;
 			case "off":
 				gebi("petForm").style.display = "block";
@@ -79,192 +109,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
-	// My submit function
-	function submit(key) {
-		// If there isn't a key, this means this is a brand new item and we need a new key.
-		if (!key) {
-			var id				= Math.floor(Math.random()*1000001);
-		} else {
-			// Set the id to the existing key I'm editing so that it will save over the data.
-			// The key is the same key that's been passed along from the editSubmit event handler
-			// to the validate function, and then passed here, into the submit function.
-			id					= key;
-		};
-		
-		// Gather round ye olde form field values, and store in ye olde objects.
-		// Object props contain array with the form label and input value.
-		
-		getSelectedRadio();
-		getCheckboxValue();
-		
-		var item				= {};
-			item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
-			item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
-			item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
-			item.genderValue	= ["Gender:", genderValue];
-			item.favePet		= ["Favorite KoolPet:", faveValue];
-			item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
-			item.koolness		= ["Koolness Factor:", gebi("koolness").value];
-			item.comments		= ["Comments:", gebi("comments").value];
-		// Save data into Local Storage: Use Stringify to convert the object to a string.
-		localStorage.setItem(id, JSON.stringify(item));
-		alert("Pet saved to the KoolPetsDex!");
-	};
-
-	// My getData function
-	function getData() {
-		toggleControls("on");
-		if(localStorage.length === 0) {
-			alert("There are no Pets in the KoolPetsDex, so default KoolPets were added.");
-			autoFillData();
-		};
-		
-		// This is supposed to write data from Local Storage back to the browser.
-		var makeDiv = document.createElement("div");
-		/*makeDiv.setAttribute("id", "items");*/ // Found out I don't need this line anymore.
-		var makeList = document.createElement("ul");
-		/*makeDiv.appendChild(makeList);*/ // Modified this line to work with my current code.
-		gebi("items").appendChild(makeList);
-		// This code should add the data to my page when I press show data.
-		document.body.appendChild(makeDiv);
-		gebi("items").style.display = "block";
-		for (var i=0, len=localStorage.length; i<len; i++) {
-			var makeLi = document.createElement("li");
-			var linksLi = document.createElement("div");
-			makeList.appendChild(makeLi);
-			var key = localStorage.key(i);
-			var value = localStorage.getItem(key);
-			// Convert strings back to being an object from localStorage value.
-			var object = JSON.parse(value);
-			var makeSubList = document.createElement("div");
-			makeLi.appendChild(makeSubList);
-			// This next line is to grab the Img that fits the category it's in.
-			getImg(object.petGroups[1], makeSubList);
-			for (var n in object) {
-				var makeSubLi = document.createElement("div");
-				makeSubList.appendChild(makeSubLi);
-				var optSubText = object[n][0] + " " + object[n][1];
-				makeSubLi.innerHTML = optSubText;
-				makeSubList.appendChild(linksLi);
-			};
-			// Create the edit and delete buttons/link for each item in local storage.
-			makeItemLinks(localStorage.key(i), linksLi);
-		};
-	};
-
-	// This is to get images for the correct category.
-	function getImg(catName, makeSubList) {
-		var imgLi = document.createElement("div");
-		makeSubList.appendChild(imgLi);
-		var newImg = document.createElement("img");
-		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
-		imgLi.appendChild(newImg);
-	};
-
-	// My Auto Fill Local Storage Function
-	function autoFillData() {
-		// The actual JSON OBJECT data required for this to work is coming from the 
-		// json.js file, which is loaded from the html page.
-		// Store the JSON OBJECT into local storage.
-		for(var n in json) {
-			var id = Math.floor(Math.random()*1000001);
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		};
-	};
-
-	// My Make Item Links Function
-	// Create the edit and delete links for each stored item when displayed.
-	function makeItemLinks(key, linksLi) {
-		// Add edit single item link
-		var editLink = document.createElement("a");
-		editLink.href = "#";
-		editLink.key = key;
-		var editText = "Edit KoolPet";
-		editLink.addEventListener("click", editItem);
-		editLink.innerHTML = editText;
-		linksLi.appendChild(editLink);
-
-		// Add my line break
-		var breakTag = document.createElement("br");
-		linksLi.appendChild(breakTag);
-
-
-		// Add delete single item link
-		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
-		deleteLink.key = key;
-		var deleteText = "Release KoolPet";
-		deleteLink.addEventListener("click", deleteItem);
-		deleteLink.innerHTML = deleteText;
-		linksLi.appendChild(deleteLink);
-	};
-
-	// My Edit Single Item Function
-	function editItem() {
-		// Grab data from the item local storage.
-		var value = localStorage.getItem(this.key);
-		var item = JSON.parse(value);
-		
-		// To show the form again
-		toggleControls("off");
-		
-		// Populate the form fields with current localStorage values.
-		gebi("petGroups").value = item.petGroups[1];
-		gebi("petName").value = item.petName[1];
-		gebi("petEmail").value = item.petEmail[1];
-		var radios = document.forms[0].genderValue;
-		for (var i=0; i<radios.length; i++) {
-			if (radios[i].value == "Male" && item.genderValue[1] == "Male") {
-				radios[i].setAttribute("checked", "checked");
-			} else if (radios[i].value == "Female" && item.genderValue[1] == "Female") {
-				radios[i].setAttribute("checked", "checked");
-			};
-		};
-		if (item.favePet[1] == "Yes") {
-			gebi("favePet").setAttribute("checked", "checked");
-		};
-		gebi("birthDate").value = item.birthDate[1];
-		gebi("koolness").value = item.koolness[1];
-		gebi("comments").value = item.comments[1];
-		
-		// Remove the initial listener from the input "save pet" button.
-		saveData.removeEventListener("click", submit);
-		// Change Submit button Value to Edit Button
-		gebi("submit").value = "Edit KoolPet";
-		var editSubmit = gebi("submit");
-		
-		// Save the key value established in this function as a prop of the editSubmit event
-		// so we can use that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
-		editSubmit.key = this.key;
-	};
 	
-	// My Delete Item Function
-	function deleteItem() {
-		var ask = confirm("Are you sure you want to release this KoolPet?");
-		if (ask) {
-			localStorage.removeItem(this.key);
-			alert("KoolPet WAS Released!!!");
-			window.location.reload();
-		} else {
-			alert("KoolPet was NOT Released!");
-		};
-	};
-	
-	// My Clear Data Function
-	function clearDataStorage() {
-		if(localStorage.length === 0) {
-			alert("No KoolPets in the KoolPetsDex.");
-		} else {
-			localStorage.clear();
-			alert("All KoolPets have been Released!");
-			window.location.reload();
-			return false;
-		};
-	};
-	
-	// My Validate Function
-	function validate(e) {
+// My Validate Function
+	var validate = function(e) {
 		// Define the elements we want to check
 		var getPetGroups = gebi("petGroups");
 		var getPetName = gebi("petName");
@@ -314,12 +161,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		} else {
 			// If all is OK, save the data! Send the key value (which came from the editData function).
 			// Remember this key value was passed through the editSubmit event listener as a prop.
-			submit(this.key);
+			storeData(this.key);
 		};
 	};
 	
-	// My Search Function
-	// Live Text Search from "http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/"
+
 	$(document).ready(function(){
 		$("#filter").keyup(function(){
 	 
@@ -345,15 +191,210 @@ window.addEventListener("DOMContentLoaded", function(){
 			$("#filter-count").text("Number of KoolPets = "+count);
 		});
 	});
-	
-	makeCats();
 
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+
+// My autoFillData function
+var autoFillData = function (){
+	// The actual JSON OBJECT data required for this to work is coming from the 
+	// json.js file, which is loaded from the html page.
+	// Store the JSON OBJECT into local storage.
+	for(var n in json) {
+		var id = Math.floor(Math.random()*1000001);
+		localStorage.setItem(id, JSON.stringify(json[n]));
+	};
+};
+
+// My getData function
+var getData = function(){
+
+	toggleControls("on");
+	if(localStorage.length === 0) {
+		alert("There were no Pets, so KoolPets were added!");
+		autoFillData();
+	};
+	
+	// This is supposed to write data from Local Storage back to the browser.
+	var makeDiv = document.createElement("div");
+	// makeDiv.setAttribute("id", "items"); // Found out I don't need this line anymore.
+	var makeList = document.createElement("ul");
+	// makeDiv.appendChild(makeList); // Modified this line to work with my current code.
+	gebi("items").appendChild(makeList);
+	// This code should add the data to my page when I press show data.
+	document.body.appendChild(makeDiv);
+	gebi("items").style.display = "block";
+	for (var i=0, len=localStorage.length; i<len; i++) {
+		var makeLi = document.createElement("li");
+		var linksLi = document.createElement("div");
+		makeList.appendChild(makeLi);
+		var key = localStorage.key(i);
+		var value = localStorage.getItem(key);
+		// Convert strings back to being an object from localStorage value.
+		var object = JSON.parse(value);
+		var makeSubList = document.createElement("div");
+		makeLi.appendChild(makeSubList);
+		// This next line is to grab the Img that fits the category it's in.
+		getImg(object.petGroups[1], makeSubList);
+		for (var n in object) {
+			var makeSubLi = document.createElement("div");
+			makeSubList.appendChild(makeSubLi);
+			var optSubText = object[n][0] + " " + object[n][1];
+			makeSubLi.innerHTML = optSubText;
+			makeSubList.appendChild(linksLi);
+		};
+		// Create the edit and delete buttons/link for each item in local storage.
+		makeItemLinks(localStorage.key(i), linksLi);
+	};
+
+// This is to get images for the correct category.
+	var getImg = function(catName, makeSubList) {
+		var imgLi = document.createElement("div");
+		makeSubList.appendChild(imgLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+		imgLi.appendChild(newImg);
+	};
+
+// My Make Item Links Function
+	// Create the edit and delete links for each stored item when displayed.
+	var makeItemLinks = function(key, linksLi) {
+		// Add edit single item link
+		var editLink = document.createElement("a");
+		editLink.href = "#addItem";
+		editLink.key = key;
+		var editText = "Edit KoolPet";
+		editLink.addEventListener("click", editItem);
+		editLink.innerHTML = editText;
+		linksLi.appendChild(editLink);
+
+		// Add my line break
+		var breakTag = document.createElement("br");
+		linksLi.appendChild(breakTag);
+
+
+		// Add delete single item link
+		var deleteLink = document.createElement("a");
+		deleteLink.href = "#addItem";
+		deleteLink.key = key;
+		var deleteText = "Release KoolPet";
+		deleteLink.addEventListener("click", deleteItem);
+		deleteLink.innerHTML = deleteText;
+		linksLi.appendChild(deleteLink);
+	};
+
+// My Edit Single Item Function
+	var editItem = function() {
+		// Grab data from the item local storage.
+		var value = localStorage.getItem(this.key);
+		var item = JSON.parse(value);
+		
+		// To show the form again
+		toggleControls("off");
+		
+		// Populate the form fields with current localStorage values.
+		gebi("petGroups").value = item.petGroups[1];
+		gebi("petName").value = item.petName[1];
+		gebi("petEmail").value = item.petEmail[1];
+		var radios = document.forms[0].genderValue;
+		for (var i=0; i<radios.length; i++) {
+			if (radios[i].value == "Male" && item.genderValue[1] == "Male") {
+				radios[i].setAttribute("checked", "checked");
+			} else if (radios[i].value == "Female" && item.genderValue[1] == "Female") {
+				radios[i].setAttribute("checked", "checked");
+			};
+		};
+		if (item.favePet[1] == "Yes") {
+			gebi("favePet").setAttribute("checked", "checked");
+		};
+		gebi("birthDate").value = item.birthDate[1];
+		gebi("koolness").value = item.koolness[1];
+		gebi("comments").value = item.comments[1];
+		
+		// Remove the initial listener from the input "save pet" button.
+		storeData.removeEventListener("click", storeData);
+		// Change SaveData button Value to Edit Button
+		gebi("submit").value = "Edit KoolPet";
+		var editSubmit = gebi("submit");
+		
+		// Save the key value established in this function as a prop of the editSubmit event
+		// so we can use that value when we save the data we edited.
+		editSubmit.addEventListener("click", validate);
+		editSubmit.key = this.key;
+	};
+
+};
+
+
+// My storeData function
+// var submit = function(key){
+var submit = function(key){
+	// If there isn't a key, this means this is a brand new item and we need a new key.
+	if (!key) {
+		var id				= Math.floor(Math.random()*1000001);
+	} else {
+		// Set the id to the existing key I'm editing so that it will save over the data.
+		// The key is the same key that's been passed along from the editSubmit event handler
+		// to the validate function, and then passed here, into the storeData function.
+		id					= key;
+	};
+	
+	// Gather round ye olde form field values, and store in ye olde objects.
+	// Object props contain array with the form label and input value.
+	
+	getSelectedRadio();
+	getCheckboxValue();
+	
+	var item				= {};
+		item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
+		item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
+		item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
+		item.genderValue	= ["Gender:", genderValue];
+		item.favePet		= ["Favorite KoolPet:", faveValue];
+		item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
+		item.koolness		= ["Koolness Factor:", gebi("koolness").value];
+		item.comments		= ["Comments:", gebi("comments").value];
+	// Save data into Local Storage: Use Stringify to convert the object to a string.
+	localStorage.setItem(id, JSON.stringify(item));
+	alert("Pet saved to the KoolPetsDex!");
+}; 
+
+
+// My Delete Item Function
+var	deleteItem = function (){
+	var ask = confirm("Are you sure you want to release this KoolPet?");
+	if (ask) {
+		localStorage.removeItem(this.key);
+		alert("KoolPet WAS Released!!!");
+		window.location.reload();
+	} else {
+		alert("KoolPet was NOT Released!");
+	};
+};
+
+
+// My Clear Data Function
+var clearDataStorage = function(){
+	if(localStorage.length === 0) {
+		alert("No KoolPets in the KoolPetsDex.");
+	} else {
+		localStorage.clear();
+		alert("All KoolPets have been Released!");
+		window.location.reload();
+		return false;
+	};
+};
+
+// Calling the makeCats function.
+	makeCats();
+	
+// My Variables
 	var showData = gebi("showData");
 	showData.addEventListener("click", getData);
 	var clearLink = gebi("clearData");	
 	clearLink.addEventListener("click", clearDataStorage);
 	var saveData = gebi("submit");
-	saveData.addEventListener("click", validate);
+	saveData.addEventListener("click", submit);
+
 
 });
-

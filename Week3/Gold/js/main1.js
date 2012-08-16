@@ -1,11 +1,32 @@
-// write your javascript in here
-
 /*
 Author: Kevin Ward
 Class: MIU1208
 Name: Project 3
 Date: 08-16-2012
 */
+
+// My Main Validate function
+
+$("#addItem").on("pageinit", function(){
+
+	var myForm = $("#petForm"),
+		aierrorsLink = $("#aierrorsLink")
+		;
+	
+		myForm.validate({
+		invalidHandler: function(form, validator) {
+			aierrorsLink.click();
+		},
+		submitHandler: function() {
+			var data = myForm.serializeArray();
+			storeData(data);
+	}
+});
+
+});
+
+
+
 
 // My Functions
 //This is to wait until the DOM is fully loaded and ready.
@@ -30,6 +51,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			selectLi = gebi("petsType"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "petGroups");
+			makeSelect.setAttribute("class", "required");
 		for (var i=0, j=petGroups.length; i<j; i++) {
 			var makeOption = document.createElement("option");
 			var optTxt = petGroups[i];
@@ -66,7 +88,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				gebi("clearData").style.display = "inline";
 				gebi("showData").style.display = "none";
 				gebi("addNew").style.display = "inline";
-				gebi("items").style.display = "block";
+				gebi("items").style.display = "inline";
 				break;
 			case "off":
 				gebi("petForm").style.display = "block";
@@ -99,24 +121,24 @@ window.addEventListener("DOMContentLoaded", function(){
 		getCheckboxValue();
 		
 		var item				= {};
-			item.petGroups		= ["LamePet Type:", gebi("petGroups").value];
-			item.petName		= ["LamePet\'s Name:", gebi("petName").value];
-			item.petEmail		= ["LamePet Email:", gebi("petEmail").value];
+			item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
+			item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
+			item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
 			item.genderValue	= ["Gender:", genderValue];
-			item.favePet		= ["Favorite LamePet:", faveValue];
+			item.favePet		= ["Favorite KoolPet:", faveValue];
 			item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
-			item.koolness		= ["Lameness Factor:", gebi("koolness").value];
+			item.koolness		= ["Koolness Factor:", gebi("koolness").value];
 			item.comments		= ["Comments:", gebi("comments").value];
 		// Save data into Local Storage: Use Stringify to convert the object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
-		alert("Pet saved to the LamePetsDex!");
+		alert("Pet saved to the KoolPetsDex!");
 	};
 
 	// My getData function
 	function getData() {
 		toggleControls("on");
 		if(localStorage.length === 0) {
-			alert("There are no Pets in the LamePetsDex, so default LamePets were added.");
+			alert("There are no Pets in the KoolPetsDex, so default KoolPets were added.");
 			autoFillData();
 		};
 		
@@ -178,9 +200,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	function makeItemLinks(key, linksLi) {
 		// Add edit single item link
 		var editLink = document.createElement("a");
-		editLink.href = "#";
+		editLink.href = "#addItem";
 		editLink.key = key;
-		var editText = "Edit LamePet";
+		var editText = "Edit KoolPet";
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
@@ -192,9 +214,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		// Add delete single item link
 		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
+		deleteLink.href = "#addItem";
 		deleteLink.key = key;
-		var deleteText = "Release LamePet";
+		var deleteText = "Release KoolPet";
 		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
@@ -231,7 +253,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		// Remove the initial listener from the input "save pet" button.
 		saveData.removeEventListener("click", submit);
 		// Change Submit button Value to Edit Button
-		gebi("submit").value = "Edit LamePet";
+		gebi("submit").value = "Edit KoolPet";
 		var editSubmit = gebi("submit");
 		
 		// Save the key value established in this function as a prop of the editSubmit event
@@ -242,23 +264,23 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	// My Delete Item Function
 	function deleteItem() {
-		var ask = confirm("Are you sure you want to release this LamePet?");
+		var ask = confirm("Are you sure you want to release this KoolPet?");
 		if (ask) {
 			localStorage.removeItem(this.key);
-			alert("LamePet WAS Released!!!");
+			alert("KoolPet WAS Released!!!");
 			window.location.reload();
 		} else {
-			alert("LamePet was NOT Released!");
+			alert("KoolPet was NOT Released!");
 		};
 	};
 	
 	// My Clear Data Function
 	function clearDataStorage() {
 		if(localStorage.length === 0) {
-			alert("No LamePets in the LamePetsDex.");
+			alert("No KoolPets in the KoolPetsDex.");
 		} else {
 			localStorage.clear();
-			alert("All LamePets have been Released!");
+			alert("All KoolPets have been Released!");
 			window.location.reload();
 			return false;
 		};
@@ -282,14 +304,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		// Pet Type Validation
 		if (getPetGroups.value === "--Choose A Pet Group--") {
-			var petGroupsError = "Please choose a LamePet Group!";
+			var petGroupsError = "Please choose a KoolPet Group!";
 			getPetGroups.style.border = "1px solid red";
 			messageArray.push(petGroupsError);
 		};
 		
 		// Pet Name Validation
 		if (getPetName.value === "") {
-			var petNameError = "Please enter a LamePet Name!";
+			var petNameError = "Please enter a KoolPet Name!";
 			getPetName.style.border = "1px solid red";
 			messageArray.push(petNameError);
 		};
@@ -298,7 +320,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var re = /^\w+([\.\-]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,3})+$/;
 		var re2 = /^([a-z0-9])([\w\.\-\+])+([a-z0-9])\@((\w)([\w\-]?)+\.)+([a-z]{2,6})$/;
 		if (!(re.exec(getPetEmail.value))) {
-			var petEmailError = "Please enter an email for your LamePet!";
+			var petEmailError = "Please enter an email for your KoolPet!";
 			getPetEmail.style.border = "1px solid red";
 			messageArray.push(petEmailError);
 		};
@@ -343,9 +365,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	 
 			// Update the count
 			var numberItems = count;
-			$("#filter-count").text("Number of LamePets = "+count);
+			$("#filter-count").text("Number of KoolPets = "+count);
 		});
 	});
+	
+	
 	
 	makeCats();
 
