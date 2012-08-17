@@ -159,12 +159,6 @@ legend {
 	color: #006600;
 }
 
-label.error {
-	display: block;
-	margin: 10px 0;
-	color: #CC0000;
-}
-
 #aierrorsLink {
 	display: none;
 }
@@ -229,6 +223,23 @@ small {
 	text-shadow: 1px 1px 2px #FF00FF;
 }
 
+#birthDate { margin-left: .5em; float: left; }
+#birthDate, label { float: left; font-family: Arial, Helvetica, sans-serif; font-size: small; }
+br { clear: both; }
+input { border: 1px solid black; margin-bottom: .5em;  }
+input.error { border: 1px solid red; }
+label.error {
+	padding-left: 16px;
+	margin-left: .3em;
+	display: block;
+	margin: 10px 0;
+	color: #CC0000;
+}
+label.valid {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
 
 
 

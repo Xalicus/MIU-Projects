@@ -36,6 +36,16 @@ $('#addItem').on('pageinit', function(){
 		}
 	});
 	
+$("#petForm").validate({
+	rules: {
+		birthDate: {
+			required: true,
+			dateISO: true
+		}
+	}
+});
+	
+	
 	//any other code needed for addItem page goes here
 
 
@@ -111,7 +121,7 @@ $('#addItem').on('pageinit', function(){
 	
 	
 // My Validate Function
-	var validate = function(e) {
+/*	var validate = function(e) {
 		// Define the elements we want to check
 		var getPetGroups = gebi("petGroups");
 		var getPetName = gebi("petName");
@@ -163,7 +173,7 @@ $('#addItem').on('pageinit', function(){
 			// Remember this key value was passed through the editSubmit event listener as a prop.
 			storeData(this.key);
 		};
-	};
+	};*/
 	
 
 	$(document).ready(function(){
@@ -206,6 +216,39 @@ var autoFillData = function (){
 	};
 };
 
+// My storeData function
+// var submit = function(key){
+var storeData = function(key){
+	// If there isn't a key, this means this is a brand new item and we need a new key.
+	if (!key) {
+		var id				= Math.floor(Math.random()*1000001);
+	} else {
+		// Set the id to the existing key I'm editing so that it will save over the data.
+		// The key is the same key that's been passed along from the editSubmit event handler
+		// to the validate function, and then passed here, into the storeData function.
+		id					= key;
+	};
+	
+	// Gather round ye olde form field values, and store in ye olde objects.
+	// Object props contain array with the form label and input value.
+	
+	getSelectedRadio();
+	getCheckboxValue();
+	
+	var item				= {};
+		item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
+		item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
+		item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
+		item.genderValue	= ["Gender:", genderValue];
+		item.favePet		= ["Favorite KoolPet:", faveValue];
+		item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
+		item.koolness		= ["Koolness Factor:", gebi("koolness").value];
+		item.comments		= ["Comments:", gebi("comments").value];
+	// Save data into Local Storage: Use Stringify to convert the object to a string.
+	localStorage.setItem(id, JSON.stringify(item));
+	// alert("Pet saved to the KoolPetsDex!");
+}; 
+
 // My getData function
 var getData = function(){
 
@@ -215,38 +258,6 @@ var getData = function(){
 		autoFillData();
 	};
 	
-	// This is supposed to write data from Local Storage back to the browser.
-	var makeDiv = document.createElement("div");
-	// makeDiv.setAttribute("id", "items"); // Found out I don't need this line anymore.
-	var makeList = document.createElement("ul");
-	// makeDiv.appendChild(makeList); // Modified this line to work with my current code.
-	gebi("items").appendChild(makeList);
-	// This code should add the data to my page when I press show data.
-	document.body.appendChild(makeDiv);
-	gebi("items").style.display = "block";
-	for (var i=0, len=localStorage.length; i<len; i++) {
-		var makeLi = document.createElement("li");
-		var linksLi = document.createElement("div");
-		makeList.appendChild(makeLi);
-		var key = localStorage.key(i);
-		var value = localStorage.getItem(key);
-		// Convert strings back to being an object from localStorage value.
-		var object = JSON.parse(value);
-		var makeSubList = document.createElement("div");
-		makeLi.appendChild(makeSubList);
-		// This next line is to grab the Img that fits the category it's in.
-		getImg(object.petGroups[1], makeSubList);
-		for (var n in object) {
-			var makeSubLi = document.createElement("div");
-			makeSubList.appendChild(makeSubLi);
-			var optSubText = object[n][0] + " " + object[n][1];
-			makeSubLi.innerHTML = optSubText;
-			makeSubList.appendChild(linksLi);
-		};
-		// Create the edit and delete buttons/link for each item in local storage.
-		makeItemLinks(localStorage.key(i), linksLi);
-	};
-
 // This is to get images for the correct category.
 	var getImg = function(catName, makeSubList) {
 		var imgLi = document.createElement("div");
@@ -282,6 +293,38 @@ var getData = function(){
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
 	};
+	
+	// This is supposed to write data from Local Storage back to the browser.
+	var makeDiv = document.createElement("div");
+	// makeDiv.setAttribute("id", "items"); // Found out I don't need this line anymore.
+	var makeList = document.createElement("ul");
+	// makeDiv.appendChild(makeList); // Modified this line to work with my current code.
+	gebi("items").appendChild(makeList);
+	// This code should add the data to my page when I press show data.
+	document.body.appendChild(makeDiv);
+	gebi("items").style.display = "block";
+	for (var i=0, len=localStorage.length; i<len; i++) {
+		var makeLi = document.createElement("li");
+		var linksLi = document.createElement("div");
+		makeList.appendChild(makeLi);
+		var key = localStorage.key(i);
+		var value = localStorage.getItem(key);
+		// Convert strings back to being an object from localStorage value.
+		var object = JSON.parse(value);
+		var makeSubList = document.createElement("div");
+		makeLi.appendChild(makeSubList);
+		// This next line is to grab the Img that fits the category it's in.
+		getImg(object.petGroups[1], makeSubList);
+		for (var n in object) {
+			var makeSubLi = document.createElement("div");
+			makeSubList.appendChild(makeSubLi);
+			var optSubText = object[n][0] + " " + object[n][1];
+			makeSubLi.innerHTML = optSubText;
+			makeSubList.appendChild(linksLi);
+		};
+		// Create the edit and delete buttons/link for each item in local storage.
+		makeItemLinks(localStorage.key(i), linksLi);
+	};
 
 // My Edit Single Item Function
 	var editItem = function() {
@@ -312,53 +355,18 @@ var getData = function(){
 		gebi("comments").value = item.comments[1];
 		
 		// Remove the initial listener from the input "save pet" button.
-		storeData.removeEventListener("click", storeData);
+		storeData.removeEventListener("click", submit);
 		// Change SaveData button Value to Edit Button
 		gebi("submit").value = "Edit KoolPet";
 		var editSubmit = gebi("submit");
 		
 		// Save the key value established in this function as a prop of the editSubmit event
 		// so we can use that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
+		editSubmit.addEventListener("click", submit);
 		editSubmit.key = this.key;
 	};
 
 };
-
-
-// My storeData function
-// var submit = function(key){
-var submit = function(key){
-	// If there isn't a key, this means this is a brand new item and we need a new key.
-	if (!key) {
-		var id				= Math.floor(Math.random()*1000001);
-	} else {
-		// Set the id to the existing key I'm editing so that it will save over the data.
-		// The key is the same key that's been passed along from the editSubmit event handler
-		// to the validate function, and then passed here, into the storeData function.
-		id					= key;
-	};
-	
-	// Gather round ye olde form field values, and store in ye olde objects.
-	// Object props contain array with the form label and input value.
-	
-	getSelectedRadio();
-	getCheckboxValue();
-	
-	var item				= {};
-		item.petGroups		= ["KoolPet Type:", gebi("petGroups").value];
-		item.petName		= ["KoolPet\'s Name:", gebi("petName").value];
-		item.petEmail		= ["KoolPet Email:", gebi("petEmail").value];
-		item.genderValue	= ["Gender:", genderValue];
-		item.favePet		= ["Favorite KoolPet:", faveValue];
-		item.birthDate		= ["Date of Birth:", gebi("birthDate").value];
-		item.koolness		= ["Koolness Factor:", gebi("koolness").value];
-		item.comments		= ["Comments:", gebi("comments").value];
-	// Save data into Local Storage: Use Stringify to convert the object to a string.
-	localStorage.setItem(id, JSON.stringify(item));
-	alert("Pet saved to the KoolPetsDex!");
-}; 
-
 
 // My Delete Item Function
 var	deleteItem = function (){
@@ -394,7 +402,7 @@ var clearDataStorage = function(){
 	var clearLink = gebi("clearData");	
 	clearLink.addEventListener("click", clearDataStorage);
 	var saveData = gebi("submit");
-	saveData.addEventListener("click", submit);
+	saveData.addEventListener("click", storeData);
 
 
 });
