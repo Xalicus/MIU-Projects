@@ -9,8 +9,15 @@ Date: 08-23-2012
 #charset "utf-8";
 
 * {
-	/*background: #CCFFCC;*/
-	background: transparent;
+	background: #CCFFCC; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 .ui-page, .ui-dialog {
@@ -23,8 +30,9 @@ body {
 	padding: 0px;
 	/*max-width: 640px;*/
 	text-align: center;
-	/*background: #CCFFCC;*/
-	background: url(images/Hello_Cthulhu.jpg) repeat center !important;
+	background: #CCFFCC; /* for non-css3 browsers */
+	
+	/*background: transparent url("images/bg.jpg") repeat center !important;*/
 }
 
 header {
@@ -66,12 +74,16 @@ article {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	text-align: center;
-}
+	
+	background: #ccffcc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
 
-div#petsearchbrowse {
-	/*background: #CCFFCC;*/
-	background: transparent;
-	text-align: center;
 }
 
 article#KoolPetForm {
@@ -79,13 +91,33 @@ article#KoolPetForm {
 	/*border: 1px solid #FF6600;*/
 	padding: 3px;
 	text-align: center;
-	/*background: #CCFFFF;*/
-	background: transparent;
+	background: #CCFFFF; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 div {
 	text-align: left;
 	color: #006600;
+}
+
+div#petsearchbrowse {
+	/*background: #CCFFCC;*/
+	text-align: center;
+	background: -moz-linear-gradient(top, #ccffcc 0%, #ccffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff));
+	background: -webkit-linear-gradient(top, #ccffcc 0%,#ccffff 100%);
+	background: -o-linear-gradient(top, #ccffcc 0%,#ccffff 100%);
+	background: -ms-linear-gradient(top, #ccffcc 0%,#ccffff 100%);
+	background: linear-gradient(to bottom, #ccffcc 0%,#ccffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ccffcc", endColorstr="#ccffff",GradientType=0 );
+	
 }
 
 div#searchPets {
@@ -117,6 +149,14 @@ div#petsForm {
 	padding: 3px;
 	background: #CCFFCC;
 	color: darkgreen;
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 div#author {
@@ -127,7 +167,7 @@ div#author {
 	background: transparent;
 }
 
-div#news {
+div#news1 {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
@@ -170,6 +210,16 @@ form {
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
 	background: #CCFFCC;
+	
+	background: #ccffcc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 legend {
@@ -182,7 +232,15 @@ legend {
 }
 
 ul {
-	background: #CCFFCC;
+	background: #CCFFCC; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 li {
@@ -222,7 +280,15 @@ a#addPet {
 	padding: 3px;
 	color: #0000FF;
 	text-shadow: 1px 1px 2px #FF00FF;
-	background: #CCFFCC;
+	background: #CCFFCC; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 span {
@@ -283,9 +349,30 @@ body {
 </style>
 
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background: #CCFFCC;
+	
+	background: transparent url("images/bg.jpg") repeat center !important;
+	
+	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff));
+	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%);
+	background: -o-linear-gradient(top,  #ccffcc 0%,#ccffff 100%);
+	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%);
+	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 );
+	
+}
+
+
+
 .ui-page
 {
-   background: transparent url(images/Hello_Cthulhu.jpg) no-repeat center center;
+   background: transparent url(images/bg.jpg) no-repeat center center;
 }
 
 
