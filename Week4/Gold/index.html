@@ -99,13 +99,13 @@ Date: 08-23-2012
 				
 				<h3>Browse By Thumbnails</h3>
 				<div class="ui-grid-a">
-					<div class="ui-block-a"><a href="#cs"><img src="images/Birds.png" /></a></div>
-					<div class="ui-block-b"><a href="#cs"><img src="images/Cats.png" /></a></div>
-					<div class="ui-block-a"><a href="#cs"><img src="images/Dogs.png" /></a></div>
-					<div class="ui-block-b"><a href="#cs"><img src="images/Farm_Animals.png" /></a></div>
-					<div class="ui-block-a"><a href="#cs"><img src="images/Mythical.png" /></a></div>
-					<div class="ui-block-b"><a href="#cs"><img src="images/Reptiles.png" /></a></div>
-					<div class="ui-block-a"><a href="#cs"><img src="images/Rodents.png" /></a></div>
+					<div class="ui-block-a" id="btn"><a href="#cs"><img src="images/Birds.png" /></a><br />Birds</div>
+					<div class="ui-block-b" id="btn"><a href="#cs"><img src="images/Cats.png" /></a><br />Cats</div>
+					<div class="ui-block-a" id="btn"><a href="#cs"><img src="images/Dogs.png" /></a><br />Dogs</div>
+					<div class="ui-block-b" id="btn"><a href="#cs"><img src="images/Farm_Animals.png" /></a><br />Farm Animals</div>
+					<div class="ui-block-a" id="btn"><a href="#cs"><img src="images/Mythical.png" /></a><br />Mythical</div>
+					<div class="ui-block-b" id="btn"><a href="#cs"><img src="images/Reptiles.png" /></a><br />Reptiles</div>
+					<div class="ui-block-a" id="btn"><a href="#cs"><img src="images/Rodents.png" /></a><br />Rodents</div>
 				</div><!-- /grid-b -->
 				
 			</div> <!-- end browsePets -->
@@ -242,7 +242,9 @@ Date: 08-23-2012
 						<div data-role="fieldcontain">
 							<div>
 							<label for="favePet">Favorite KoolPet:</label>
-							<input type="checkbox" value="Yes" name="favePet" id="favePet" class="checkbox" checked="checked" />
+							<input id="favePet" class="checkbox" type="checkbox" name="favePet" value="Yes" />
+							<label for="favePet1">Favorite KoolPet:</label>
+							<input id="favePet1" class="checkbox" type="checkbox" checked="checked" name="favePet1" value="Yes">
 							</div>
 						</div>
 						
@@ -391,8 +393,8 @@ Date: 08-23-2012
 				<p><a href="#home" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Home</a>
 				<a href="../Gold/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Gold App</a>
 				<a href="../Bronze/index.html" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">Bronze App</a><br />
-				<a href="http://xalicus.github.com/MIU-Projects/Week2/Gold/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Gold App</a>
-				<a href="http://xalicus.github.com/MIU-Projects/Week2/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a>
+				<a href="http://xalicus.github.com/MIU-Projects/Week4/Gold/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Gold App</a>
+				<a href="http://xalicus.github.com/MIU-Projects/Week4/Bronze/" data-role="button" data-mini="true" data-inline="true" data-ajax="false" rel="external">GH Pages-Bronze App</a>
 				</p>
 				</div>
 			</div>
@@ -437,6 +439,11 @@ Date: 08-23-2012
 			<div id="news">
 				<div data-role="fieldcontain">
 				<h3>KoolPetsDex News of DOOM!</h3>
+				</div>
+				
+				<div data-role="fieldcontain">
+				<h4>August 20th, 2012</h4>
+				<p>Started MIU 1208 Week 4.</p>
 				</div>
 				
 				<div data-role="fieldcontain">

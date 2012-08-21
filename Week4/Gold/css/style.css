@@ -1,4 +1,3 @@
-// write your CSS in here
 
 /*
 Author: Kevin Ward
@@ -10,7 +9,12 @@ Date: 08-23-2012
 #charset "utf-8";
 
 * {
-	background: #CCFFCC;
+	/*background: #CCFFCC;*/
+	background: transparent;
+}
+
+.ui-page, .ui-dialog {
+    background: transparent repeat scroll;
 }
 
 body {
@@ -19,7 +23,8 @@ body {
 	padding: 0px;
 	/*max-width: 640px;*/
 	text-align: center;
-	background: #CCFFCC;
+	/*background: #CCFFCC;*/
+	background: url(images/Hello_Cthulhu.jpg) repeat center !important;
 }
 
 header {
@@ -64,7 +69,8 @@ article {
 }
 
 div#petsearchbrowse {
-	background: #CCFFCC;
+	/*background: #CCFFCC;*/
+	background: transparent;
 	text-align: center;
 }
 
@@ -73,7 +79,8 @@ article#KoolPetForm {
 	/*border: 1px solid #FF6600;*/
 	padding: 3px;
 	text-align: center;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
+	background: transparent;
 }
 
 div {
@@ -99,6 +106,10 @@ div#browsePets {
 	color: darkgreen;
 }
 
+div#btn {
+	text-align: center;
+}
+
 div#petsForm {
 	font-family: "Times New Roman", Times, serif;
 	margin: 1px 5px;
@@ -112,21 +123,24 @@ div#author {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
+	background: transparent;
 }
 
 div#news {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
+	background: transparent;
 }
 
 div#underconst {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
-	background: #CCFFFF;
+	/*background: #CCFFFF;*/
+	background: transparent;
 	text-align: center;
 }
 
@@ -134,7 +148,7 @@ nav#addPetFeature {
 	margin: 2px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
-	/*background: #CCFFFF;*/
+	background: transparent;
 }
 
 nav#showLoseAdd {
@@ -247,3 +261,38 @@ label.valid {
 
 
 
+
+
+
+
+/*
+<style type="text/css">
+body {
+    background: url(Hello_Cthulhu.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+</style>
+
+
+.ui-page
+{
+   background: transparent url(images/Hello_Cthulhu.jpg) no-repeat center center;
+}
+
+
+.ui-page, .ui-dialog {
+    background: transparent repeat scroll;
+}
+body {
+    background: url(../../img/bluebg.jpg) repeat center 0!important;
+}
+*/
