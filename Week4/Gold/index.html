@@ -205,9 +205,22 @@ Date: 08-23-2012
 							</fieldset>
 						</div>
 						
+						<!-- <div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								<legend>Favorite KoolPet:</legend>
+								<label for="favePet">Yes</label>
+								<input id="favePet" class="checkbox" type="checkbox" name="favePet" value="Yes" />
+								<label for="favePet2">No</label>
+								<input id="favePet1" class="checkbox" type="checkbox" name="favePet" value="No" />
+							</fieldset>
+						</div> -->
+						
 						<div data-role="fieldcontain">
 							<label for="favePet">Favorite KoolPet:</label>
-							<input id="favePet" class="checkbox" type="checkbox" name="favePet" value="Yes" />
+								<select name="favePet" id="favePet" data-role="slider">
+									<option value="off">No</option>
+									<option value="on">Yes</option>
+								</select>
 						</div>
 						
 						 <div data-role="fieldcontain">

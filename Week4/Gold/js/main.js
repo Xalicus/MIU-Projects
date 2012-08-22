@@ -63,7 +63,7 @@ $("#petForm").validate({
 	var	errMsg = gebi("errors");
 
 	// Create select field element and populate with options.
-	var makeCats = function() {
+/*	var makeCats = function() {
 		var formTag = document.getElementsByTagName("petForm"),
 			selectLi = gebi("petsType"),
 			makeSelect = document.createElement("select");
@@ -77,7 +77,7 @@ $("#petForm").validate({
 			makeSelect.appendChild(makeOption);
 		};
 		selectLi.appendChild(makeSelect);
-	};
+	};*/
 	
 	// Find the value of selected radio button.
 	var getSelectedRadio = function() {
@@ -94,7 +94,7 @@ $("#petForm").validate({
 		if (gebi("favePet").checked) {
 			faveValue = gebi("favePet").value;
 		} else {
-			faveValue = "No";
+			faveValue = "Off";
 		};
 	};
 	
@@ -348,7 +348,7 @@ var getData = function(){
 			};
 		};
 		if (item.favePet[1] == "Yes") {
-			gebi("favePet").setAttribute("checked", "checked");
+			gebi("favePet").setAttribute("value", "On");
 		};
 		gebi("birthDate").value = item.birthDate[1];
 		gebi("koolness").value = item.koolness[1];
@@ -394,7 +394,7 @@ var clearDataStorage = function(){
 };
 
 // Calling the makeCats function.
-	makeCats();
+//	makeCats();
 	
 // My Variables
 	var showData = gebi("showData");
