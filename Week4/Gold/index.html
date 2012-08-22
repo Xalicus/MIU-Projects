@@ -162,20 +162,17 @@ Date: 08-23-2012
 					
 					<ul id="questions">
 						<div data-role="fieldcontain">
-							<div>
 							<label for="kool1">What is your pet?:</label>
 							<select data-role="slider">
 								<option value="off">Lame</option>
 								<option value="on">Kool</option>
 							</select>
-							</div>
 						</div>
 						
-						<div data-role="fieldcontain">
-							<div name="petsType" id="petsType">
+						<div data-role="fieldcontain" name="petsType" id="petsType">
 							<label for="petsType">KoolPet Type: *</label>
-								<!-- <select id="petGroups" class="required">
-									<option value="--Choose A Pet Group--">--Choose A Pet Group--</option>
+								<select id="petGroups" class="required">
+									<option data-placeholder="true">Choose A Pet Group:</option>
 									<option value="Birds">Birds</option>
 									<option value="Cats">Cats</option>
 									<option value="Dogs">Dogs</option>
@@ -183,52 +180,22 @@ Date: 08-23-2012
 									<option value="Mythical">Mythical</option>
 									<option value="Reptiles">Reptiles</option>
 									<option value="Rodents">Rodents</option>
-								</select> -->
-							</div>
+								</select>
 						</div>
 						
-						<!-- <div data-role="fieldcontain">
-							<div name="petsType" id="petsType">
-								<label for="petsType">KoolPet Type B: *</label>
-								<select name="petsType" id="petsType" data-native-menu="true">
-									<option data-placeholder="true">-Choose A Group-</option>
-									<optgroup label="Warm Blood:">
-										<option value="Cats">Fancy Felines</option>
-										<option value="Dogs">Candid Canines</option>
-										<option value="Farm_Animals">Domestic Beasts</option>
-										<option value="Rodents">Scurrying Critters</option>
-									<optgroup>
-									<optgroup label="Cold Blood:">
-										<option value="Birds">Flying Fouls</option>
-										<option value="Reptiles">Slithering Cold Bloods</option>
-									<optgroup>
-									<optgroup label="Magical Blood:">
-										<option value="Mythical">Dragons</option>
-										<option value="Mythical">Unicorns</option>
-										<option value="Mythical">Magical Creatures</option>
-									</optgroup>
-								</select>
-							</div>
-						</div> -->
-						
 						<div data-role="fieldcontain">
-							<div>
 							<label for="petName">KoolPet's Name: *</label>
 								<input type="text" name="petName" id="petName" value="" class="required" />
 								<p id="greyText">Example: Fluffy</p>
-							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<div>
 							<label for="petEmail">KoolPet Email: *</label>
 								<input type="email" name="petEmail" id="petEmail" value="" class="required" email />
 								<p id="greyText">Example: example@petmail.com</p>
-							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<div>
 							<fieldset data-role="controlgroup" data-type="horizontal">
 								<legend for="genderValue">Gender: *</legend>
 								<input type="radio" value="Male" name="genderValue" id="male" checked="checked" class="required" />
@@ -236,35 +203,26 @@ Date: 08-23-2012
 								<input type="radio" value="Female" name="genderValue" id="female" />
 								<label for="female">Female</label>
 							</fieldset>
-							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<div>
 							<label for="favePet">Favorite KoolPet:</label>
 							<input id="favePet" class="checkbox" type="checkbox" name="favePet" value="Yes" />
-							</div>
 						</div>
 						
 						 <div data-role="fieldcontain">
-							<div>
 							<label for="birthDate">Date of Birth: *</label>
 							<input type="date" class="left" name="birthDate" id="birthDate" />
 							<!-- min="01-01-1900" max="12-31-2099" value="07-04-2012" --> 
-							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<div>
 							<label for="koolness">Koolness Factor:</label>
 							<input type="range" name="koolness" id="koolness" data-highlight="true" min="0" max="100" value="50" step="5" data-theme="b" />
-							</div>
 						</div>
 						
 						<div data-role="fieldcontain">
-							<div>
 							<label for="comments">Comments:</label><textarea name="comments" id="comments">Place comments here...</textarea>
-							</div>
 						</div>
 					</ul>
 				<div data-role="fieldcontain">
