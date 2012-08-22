@@ -194,6 +194,11 @@ a#addPet {
 	background: #222222;
 }
 
+img#jokerface {
+	margin: 5px 5px;
+	padding: 5px;
+}
+
 span {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #FF6600;

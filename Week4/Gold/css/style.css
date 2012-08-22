@@ -86,12 +86,17 @@ article {
 
 }
 
-article#KoolPetForm {
-	margin: 2px 2px;
+div {
+	text-align: left;
+	color: #006600;
+}
+
+div#KoolPetForm {
+	margin: 0px 0px;
 	/*border: 1px solid #FF6600;*/
-	padding: 3px;
+	padding: 0px;
 	text-align: center;
-	background: #CCFFFF; /* Old browsers */
+	/*background: #CCFFFF;*/ /* Old browsers */
 	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
@@ -99,12 +104,6 @@ article#KoolPetForm {
 	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
-
-}
-
-div {
-	text-align: left;
-	color: #006600;
 }
 
 div#petsearchbrowse {
@@ -144,10 +143,10 @@ div#btn {
 
 div#petsForm {
 	font-family: "Times New Roman", Times, serif;
-	margin: 1px 5px;
+	margin: 1px 2px;
 	border: 1px solid #FF6600;
 	padding: 3px;
-	background: #CCFFCC;
+	background: transparent;
 	color: darkgreen;
 	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
@@ -156,7 +155,6 @@ div#petsForm {
 	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
-
 }
 
 div#author {
@@ -209,9 +207,7 @@ form {
 	line-height: 1.0em;
 	letter-spacing: .001em;
 	font-family: Arial, Helvetica, sans-serif;
-	background: #CCFFCC;
-	
-	background: #ccffcc; /* Old browsers */
+	background: #CCFFCC; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ccffcc 0%, #ccffff 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#ccffff)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* Chrome10+,Safari5.1+ */
@@ -219,7 +215,6 @@ form {
 	background: -ms-linear-gradient(top,  #ccffcc 0%,#ccffff 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ccffcc 0%,#ccffff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffcc', endColorstr='#ccffff',GradientType=0 ); /* IE6-9 */
-
 }
 
 legend {
